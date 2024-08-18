@@ -23,14 +23,19 @@ class MaSIF_site2(tf.keras.layers.Layer):
     ):
         n_samples = rho_coords.shape[1]
         n_vertices = rho_coords.shape[2]
+        # print("n_samples", rho_coords.shape)
+        # print("vertices", n_vertices)
 
         all_conv_feat = []
         for k in range(self.n_rotations):
-
+            # print("rotation", k)
+            # print("\trotation", k+1)
+            # rho_coords_ = tf.reshape(rho_coords, [-1, 1])  # batch_size*n_vertices
             rho_coords_ = tf.reshape(rho_coords, (-1,n_samples*n_vertices, 1))
-          
+            # print("Brian rho_coords,rho_coords_", rho_coords.shape, rho_coords_.shape)
+            # thetas_coords_ = tf.reshape(theta_coords, [-1, 1])  # batch_size*n_vertices
             thetas_coords_ = tf.reshape(theta_coords, (-1,n_samples*n_vertices,1))
-        
+            # print("thetas_coords,thetas_coords_", theta_coords.shape, thetas_coords_.shape)
             thetas_coords_ += k * 2 * np.pi / self.n_rotations
             thetas_coords_ = tf.math.mod(thetas_coords_, 2 * np.pi)
             rho_coords_ = tf.exp(
@@ -43,47 +48,56 @@ class MaSIF_site2(tf.keras.layers.Layer):
             gauss_activations = tf.multiply(
                 rho_coords_, thetas_coords_
             )  # batch_size*n_vertices, n_gauss
-         
+            # print("gauss_activations shape 1",gauss_activations.shape)
+            # print("gauss_activations1", gauss_activations.shape, rho_coords_.shape, thetas_coords_.shape)
             gauss_activations = tf.reshape(
+                # gauss_activations, [n_samples, n_vertices, -1]
                 gauss_activations,[-1,n_samples, n_vertices ,tf.shape(gauss_activations)[-1]]
             )  # batch_size, n_vertices, n_gauss
-          
+            # print("gauss_activations2", gauss_activations.shape, n_samples, n_vertices,-1)
+            # print("gauss_activations shape 2",gauss_activations.shape)
+            # print("gauss_activations,mask", gauss_activations.shape, mask.shape)
             gauss_activations = tf.multiply(gauss_activations, mask)
-           
+            # print("this is actually working")
+            
             if (
                 mean_gauss_activation
             ):  # computes mean weights for the different gaussians
                 gauss_activations /= (
                     tf.reduce_sum(gauss_activations, 1, keepdims=True) + eps
                 )  # batch_size, n_vertices, n_gauss
-
+            # print("1", gauss_activations.shape)
             gauss_activations = tf.expand_dims(
+                # gauss_activations, 2
                 gauss_activations, 3
             )  # batch_size, inputsize, n_vertices, 1, n_gauss,
-
+            # print("2", gauss_activations.shape)
             input_feat_ = tf.expand_dims(
+                # input_feat, 3
                 input_feat, 4
             )  # batch_size, inputsize, n_vertices, n_feat, 1
-
+            # print("3", input_feat_.shape)
             gauss_desc = tf.multiply(
                 gauss_activations, input_feat_
             )  # batch_size, n_vertices, n_feat, n_gauss,
-
+            # print("4", gauss_desc.shape)
             gauss_desc = tf.reduce_sum(gauss_desc, 2)  # batch_size, n_feat, n_gauss,
-
+            # print("5", gauss_desc.shape)
             gauss_desc = tf.reshape(
                 gauss_desc, [-1,n_samples, self.n_thetas * self.n_rhos]
             )  # batch_size, 80
-
+            
+            # print("6", gauss_desc.shape)
             conv_feat = tf.matmul(gauss_desc, W_conv) + b_conv  # batch_size, 80
-
+            # print("7", conv_feat.shape)
+            # rho_coords2 = tf.identity(conv_feat)
             all_conv_feat.append(conv_feat)
 
         all_conv_feat = tf.stack(all_conv_feat)
         conv_feat = tf.reduce_max(all_conv_feat, 0)
         conv_feat = tf.nn.relu(conv_feat)
         return conv_feat
-  
+        # return 1,2
         
     def __init__(
         self,
@@ -257,4 +271,3 @@ class MaSIF_site2(tf.keras.layers.Layer):
         coords = coords.T  # every row contains the coordinates of a grid intersection
         # print(coords.shape)
         return coords
-
