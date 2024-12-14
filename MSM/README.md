@@ -1,7 +1,7 @@
-##### Metadynamics
+#### Metadynamics
 
 
-##### Flooding G1
+#### Flooding G1
 [GLUT1 Structure](https://www.nature.com/articles/nature13306/figures/1)
 Ala402-403 are in Helix 11 which crosses with helix 7
 Opening PHE-TRP(helix)-glycine-helix is helix 10
@@ -31,7 +31,7 @@ MPVFGTCLGC (inverted)
 
 
 
-#### MSMs
+### MSMs
 PHE flips of 180 degrees in Kinases, 90 degrees in GLUT1??  Any pertainent PHEs in Dioxygenases?
 
 The attribute msm.pi tells us, for each discrete state, the absolute probability of observing said state in global equilibrium. Mathematically speaking, the stationary distribution π
