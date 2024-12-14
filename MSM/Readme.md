@@ -43,10 +43,9 @@ $\pi^\top P = \pi^\top$
 
 ###### Formula for Timescales
 The implied timescales are calculated as:
+
 $$
-\[
 \tau_i = -\frac{\tau_{\text{lag}}}{\ln(\lambda_i)}
-\]
 $$
 where:
 
