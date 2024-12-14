@@ -44,9 +44,8 @@ $\pi^\top P = \pi^\top$
 ###### Formula for Timescales
 The implied timescales are calculated as:
 
-$$
-\tau_i = -\frac{\tau_{\text{lag}}}{\ln(\lambda_i)}
-$$
+$\tau_i = -\frac{\tau_{\text{lag}}}{\ln(\lambda_i)}$
+
 where:
 
 - \(i\) is the index of the eigenvalue, with \(i = 2, 3, \dots\) (the first eigenvalue, \(\lambda_1 = 1\), is excluded as it corresponds to the stationary distribution).
