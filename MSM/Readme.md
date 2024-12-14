@@ -48,11 +48,11 @@ $\tau_i = -\frac{\tau_{\text{lag}}}{\ln(\lambda_i)}$
 
 where:
 
-- \(i\) is the index of the eigenvalue, with \(i = 2, 3, \dots\) (the first eigenvalue, \(\lambda_1 = 1\), is excluded as it corresponds to the stationary distribution).
+- \(i\) is the index of the eigenvalue, with $\(i = 2, 3, \dots\)$ (the first eigenvalue, $\(\lambda_1 = 1\)$, is excluded as it corresponds to the stationary distribution).
   ```python
   ## first 5 for mm are
   mm.eigenvalues()[1:6]
   out: array([0.97855449, 0.8886344 , 0.82838174, 0.75829495, 0.75497462])
   ```
-- \(\lambda_i\) is the \(i\)-th eigenvalue of the transition matrix \(P\), computed from the MSM.
-- \(\tau_{\text{lag}}\) is the lag time used to estimate the MSM.
+- $\(\lambda_i\)$ is the $\(i\)$-th eigenvalue of the transition matrix $\(P\)$, computed from the MSM.
+- $\(\tau_{\text{lag}}\)$ is the lag time used to estimate the MSM.
