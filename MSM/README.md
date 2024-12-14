@@ -1,5 +1,11 @@
 #### Metadynamics
 
+Errors, WHAM (hist2d and averages over blocks)
+
+
+
+
+
 
 #### Flooding G1
 [GLUT1 Structure](https://www.nature.com/articles/nature13306/figures/1)
