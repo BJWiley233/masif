@@ -1,7 +1,7 @@
 #### Metadynamics
 
 Errors, WHAM (hist2d and averages over blocks)
-
+In this exercise we will use the second method, which resembles the [umbrella-sampling reweighting](https://www.plumed.org/doc-v2.9/user-doc/html/master-_i_s_d_d-2.html) approach
 
 
 
@@ -22,10 +22,10 @@ Glycine hinges below in helix 7 (occlusion) and helix 10 (opening)
 [The Alternating-Access Mechanism of MFS Transporters Arises from Inverted-Topology Repeats](https://www.sciencedirect.com/science/article/pii/S0022283611001410?via%3Dihub)
 Helix-Gly-Helix Sequence Opening: 
 
-G1	IC 389 388 387 386 385 384 383 382 381 380 379 EC
-G1	   PHE TRP PRO ILE PRO GLY PRO GLY ALA GLU PHE
-G3  EC 377 378 379 380 381 382 383 384 385 386 387 IC
-G3     PHE GLU ILE GLY PRO GLY PRO ILE PRO TRP PHE
+- **G1** IC 389 388 387 386 385 384 383 382 381 380 379 EC  
+- **G1**    PHE TRP PRO ILE PRO GLY PRO GLY ALA GLU PHE
+- **G3** EC 377 378 379 380 381 382 383 384 385 386 387 IC
+- **G3**    PHE GLU ILE GLY PRO GLY PRO ILE PRO TRP PHE
 
 Helix-Gly-Helix Sequence Gate-Keeper: 
 G1 282-290 (P11166)
