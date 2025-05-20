@@ -230,7 +230,7 @@ def main():
     init_weights = wandb.config.init_weights
     bias_init = wandb.config.bias_init
 
-    learning_rate = wandb.config.learning_rate
+    lr = wandb.config.learning_rate
     epochs = wandb.config.epochs
     batch_size = wandb.config.batch_size
     weight_decay = wandb.config.weight_decay
@@ -244,7 +244,7 @@ def main():
     c = {
         "init_weights": init_weights,
         "bias_init": bias_init,
-        "learning_rate": learning_rate,
+        "learning_rate": lr,
         "epochs": epochs,
         "batch_size": batch_size, 
         "weight_decay": weight_decay, 
