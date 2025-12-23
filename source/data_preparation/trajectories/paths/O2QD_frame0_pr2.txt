@@ -1,9 +1,4 @@
 Sim=6
-end=150
-start=0
-frames = torch.arange(0, end, dtype=torch.float32)  # [0,1,...,N-1]
-frame_norm = frames / (end - start)    
-frame_emb = sinusoidal_embedding(frame_norm, dim=16)
 frame_pos=torch.tensor([9.6, 10.7, 7.1]) # pr mid
 
 space=0.85
@@ -66,7 +61,7 @@ for start in range(start+0,start+150):
         torch.cuda.empty_cache()
 
 
-    bias=get_fe_bias(xyz2, frame_pos, alpha=500.0, beta=0.001, denom=4, range_=0.5)
+    bias=get_fe_bias(xyz2, frame_pos, alpha=500.0, beta=0.0001, denom=2, range_=0.5)
     results_biased = results * (1+bias.to('cuda'))
     total_positives = (results_biased>0.5).sum()
     if len(pos_embedding) < 400:
@@ -99,7 +94,7 @@ Batch 100
 Batch 120
 Batch 140
 k=3, len(pos_embedding) 429
-torch.Size([104])
+torch.Size([115])
 draw color green
 draw sphere { 10.316667 8.05 4.366667 } radius 0.5
 1_Sim6_frame1_of_150.pdb
@@ -119,43 +114,44 @@ Batch 20
 Batch 40
 Batch 60
 k=3
-torch.Size([72])
+torch.Size([75])
 draw color black
-draw sphere { 11.166667 8.9 5.2166667 } radius 0.5
+draw sphere { 9.75 7.4833336 8.333333 } radius 0.5
 2_Sim6_frame2_of_150.pdb
 2_Sim6_frame2_of_150_biased.pdb
 2_Sim6_frame2_of_150_bias.pdb
 translated_frame2_Sim6.pdb
-	Distance to iron: tensor(15.2026)
-	Closest atom this frame ALA354, HB3: 2.059590
-	Closest atom next frame ALA354, HB3: 2.620138
+	Distance to iron: tensor(14.8495)
+	Closest atom this frame ALA354, HB2: 2.750401
+	Closest atom next frame ALA354, HB2: 2.509906
 START: 3
-torch.Size([300, 3])
+torch.Size([377, 3])
 STEP: 3
 DOEN
-torch.Size([300, 3])
+torch.Size([377, 3])
 #################################
 Batch 20
 Batch 40
 Batch 60
 Batch 80
 Batch 100
+Batch 120
 k=3
-torch.Size([66])
+torch.Size([123])
 draw color orange
-draw sphere { 12.016666 9.75 4.933333 } radius 0.5
+draw sphere { 8.333333 5.5 10.883334 } radius 0.5
 3_Sim6_frame3_of_150.pdb
 3_Sim6_frame3_of_150_biased.pdb
 3_Sim6_frame3_of_150_bias.pdb
 translated_frame3_Sim6.pdb
-	Distance to iron: tensor(16.2419)
-	Closest atom this frame PRO347, HG3: 2.642347
-	Closest atom next frame PRO347, HG2: 2.958266
+	Distance to iron: tensor(14.7696)
+	Closest atom this frame ILE356, HD11: 2.502898
+	Closest atom next frame ILE356, HD13: 2.601616
 START: 4
-torch.Size([315, 3])
+torch.Size([328, 3])
 STEP: 4
 DOEN
-torch.Size([315, 3])
+torch.Size([328, 3])
 #################################
 Batch 20
 Batch 40
@@ -163,21 +159,21 @@ Batch 60
 Batch 80
 Batch 100
 k=3
-torch.Size([89])
+torch.Size([132])
 draw color yellow
-draw sphere { 10.883334 8.9 4.9333334 } radius 0.5
+draw sphere { 9.183333 6.633333 9.75 } radius 0.5
 4_Sim6_frame4_of_150.pdb
 4_Sim6_frame4_of_150_biased.pdb
 4_Sim6_frame4_of_150_bias.pdb
 translated_frame4_Sim6.pdb
-	Distance to iron: tensor(14.8995)
-	Closest atom this frame ALA354, HB3: 2.227476
-	Closest atom next frame ALA354, HB3: 2.318834
+	Distance to iron: tensor(14.9465)
+	Closest atom this frame ILE207, HG22: 2.915592
+	Closest atom next frame ILE356, HD12: 2.891532
 START: 5
-torch.Size([334, 3])
+torch.Size([353, 3])
 STEP: 5
 DOEN
-torch.Size([334, 3])
+torch.Size([353, 3])
 #################################
 Batch 20
 Batch 40
@@ -185,29 +181,28 @@ Batch 60
 Batch 80
 Batch 100
 k=3
-torch.Size([66])
+torch.Size([113])
 draw color blue
-draw sphere { 8.616667 7.1999993 8.333333 } radius 0.5
+draw sphere { 8.333333 7.1999993 8.616666 } radius 0.5
 5_Sim6_frame5_of_150.pdb
 5_Sim6_frame5_of_150_biased.pdb
 5_Sim6_frame5_of_150_bias.pdb
 translated_frame5_Sim6.pdb
 	Distance to iron: tensor(13.9833)
-	Closest atom this frame ILE356, HD12: 2.742795
-	Closest atom next frame ILE356, HD13: 2.397368
+	Closest atom this frame ILE207, HG23: 2.578451
+	Closest atom next frame ILE356, HD13: 2.350094
 START: 6
-torch.Size([298, 3])
+torch.Size([293, 3])
 STEP: 6
 DOEN
-torch.Size([298, 3])
+torch.Size([293, 3])
 #################################
 Batch 20
 Batch 40
 Batch 60
 Batch 80
-Batch 100
 k=3
-torch.Size([106])
+torch.Size([112])
 draw color green
 draw sphere { 8.333333 6.35 6.35 } radius 0.5
 6_Sim6_frame6_of_150.pdb
@@ -226,7 +221,7 @@ torch.Size([131, 3])
 Batch 20
 Batch 40
 k=3
-torch.Size([68])
+torch.Size([69])
 draw color black
 draw sphere { 9.75 7.4833336 8.333333 } radius 0.5
 7_Sim6_frame7_of_150.pdb
@@ -248,7 +243,7 @@ Batch 60
 Batch 80
 Batch 100
 k=3
-torch.Size([112])
+torch.Size([119])
 draw color orange
 draw sphere { 8.9 6.633333 10.883334 } radius 0.5
 8_Sim6_frame8_of_150.pdb
@@ -270,16 +265,16 @@ Batch 60
 Batch 80
 Batch 100
 k=3
-torch.Size([107])
+torch.Size([114])
 draw color yellow
-draw sphere { 8.616667 7.1999993 11.166667 } radius 0.5
+draw sphere { 8.616666 7.1999993 11.166667 } radius 0.5
 9_Sim6_frame9_of_150.pdb
 9_Sim6_frame9_of_150_biased.pdb
 9_Sim6_frame9_of_150_bias.pdb
 translated_frame9_Sim6.pdb
 	Distance to iron: tensor(15.8361)
-	Closest atom this frame VAL209, HG21: 2.732993
-	Closest atom next frame VAL209, HG21: 3.605723
+	Closest atom this frame VAL209, HG21: 2.732992
+	Closest atom next frame VAL209, HG21: 3.605722
 START: 10
 torch.Size([385, 3])
 STEP: 10
@@ -293,7 +288,7 @@ Batch 80
 Batch 100
 Batch 120
 k=3
-torch.Size([136])
+torch.Size([147])
 draw color blue
 draw sphere { 8.616667 5.2166667 7.4833336 } radius 0.5
 10_Sim6_frame10_of_150.pdb
@@ -312,7 +307,7 @@ torch.Size([139, 3])
 Batch 20
 Batch 40
 k=3
-torch.Size([86])
+torch.Size([88])
 draw color green
 draw sphere { 8.9 6.9166665 7.4833336 } radius 0.5
 11_Sim6_frame11_of_150.pdb
@@ -333,21 +328,21 @@ Batch 40
 Batch 60
 Batch 80
 k=3
-torch.Size([76])
+torch.Size([83])
 draw color black
-draw sphere { 8.616667 6.9166665 10.6 } radius 0.5
+draw sphere { 8.616667 6.9166665 9.75 } radius 0.5
 12_Sim6_frame12_of_150.pdb
 12_Sim6_frame12_of_150_biased.pdb
 12_Sim6_frame12_of_150_bias.pdb
 translated_frame12_Sim6.pdb
-	Distance to iron: tensor(15.3117)
-	Closest atom this frame ILE356, HD11: 3.422023
-	Closest atom next frame VAL209, HG22: 2.927822
+	Distance to iron: tensor(14.7360)
+	Closest atom this frame ILE207, HG23: 3.125740
+	Closest atom next frame ILE356, HD13: 2.553236
 START: 13
-torch.Size([356, 3])
+torch.Size([324, 3])
 STEP: 13
 DOEN
-torch.Size([356, 3])
+torch.Size([324, 3])
 #################################
 Batch 20
 Batch 40
@@ -355,29 +350,28 @@ Batch 60
 Batch 80
 Batch 100
 k=3
-torch.Size([115])
+torch.Size([120])
 draw color orange
-draw sphere { 8.9 6.633333 10.033334 } radius 0.5
+draw sphere { 9.466666 5.7833333 9.183333 } radius 0.5
 13_Sim6_frame13_of_150.pdb
 13_Sim6_frame13_of_150_biased.pdb
 13_Sim6_frame13_of_150_bias.pdb
 translated_frame13_Sim6.pdb
-	Distance to iron: tensor(14.9626)
-	Closest atom this frame ILE356, HD13: 2.534755
-	Closest atom next frame ILE356, HD11: 2.218887
+	Distance to iron: tensor(14.4013)
+	Closest atom this frame ILE356, HD13: 2.074584
+	Closest atom next frame ILE356, HD13: 1.344370
 START: 14
-torch.Size([318, 3])
+torch.Size([289, 3])
 STEP: 14
 DOEN
-torch.Size([318, 3])
+torch.Size([289, 3])
 #################################
 Batch 20
 Batch 40
 Batch 60
 Batch 80
-Batch 100
 k=3
-torch.Size([123])
+torch.Size([115])
 draw color yellow
 draw sphere { 8.333333 3.2333333 12.3 } radius 0.5
 14_Sim6_frame14_of_150.pdb
@@ -397,7 +391,7 @@ Batch 20
 Batch 40
 Batch 60
 k=3
-torch.Size([84])
+torch.Size([87])
 draw color blue
 draw sphere { 9.183333 7.1999993 10.033334 } radius 0.5
 15_Sim6_frame15_of_150.pdb
@@ -420,29 +414,28 @@ Batch 80
 Batch 100
 Batch 120
 k=3
-torch.Size([105])
+torch.Size([121])
 draw color green
-draw sphere { 9.183333 6.633333 9.75 } radius 0.5
+draw sphere { 8.616666 9.466666 6.066667 } radius 0.5
 16_Sim6_frame16_of_150.pdb
 16_Sim6_frame16_of_150_biased.pdb
 16_Sim6_frame16_of_150_bias.pdb
 translated_frame16_Sim6.pdb
-	Distance to iron: tensor(14.9465)
-	Closest atom this frame ILE356, HD12: 3.190359
-	Closest atom next frame ILE356, HD13: 2.527181
+	Distance to iron: tensor(14.1658)
+	Closest atom this frame ILE207, HD11: 2.264724
+	Closest atom next frame ILE207, HD13: 1.799980
 START: 17
-torch.Size([319, 3])
+torch.Size([287, 3])
 STEP: 17
 DOEN
-torch.Size([319, 3])
+torch.Size([287, 3])
 #################################
 Batch 20
 Batch 40
 Batch 60
 Batch 80
-Batch 100
 k=3
-torch.Size([104])
+torch.Size([103])
 draw color black
 draw sphere { 8.616666 8.9 6.9166665 } radius 0.5
 17_Sim6_frame17_of_150.pdb
@@ -463,51 +456,53 @@ Batch 40
 Batch 60
 Batch 80
 k=3
-torch.Size([102])
+torch.Size([106])
 draw color orange
-draw sphere { 9.75 9.183333 6.9166665 } radius 0.5
+draw sphere { 9.183333 7.1999993 10.033334 } radius 0.5
 18_Sim6_frame18_of_150.pdb
 18_Sim6_frame18_of_150_biased.pdb
 18_Sim6_frame18_of_150_bias.pdb
 translated_frame18_Sim6.pdb
-	Distance to iron: tensor(15.0744)
-	Closest atom this frame ALA354, HB2: 2.347770
-	Closest atom next frame ALA354, HB2: 1.728630
+	Distance to iron: tensor(15.3897)
+	Closest atom this frame ILE207, HG21: 2.907350
+	Closest atom next frame ILE356, HD12: 3.032595
 START: 19
-torch.Size([353, 3])
+torch.Size([361, 3])
 STEP: 19
 DOEN
-torch.Size([353, 3])
+torch.Size([361, 3])
 #################################
 Batch 20
 Batch 40
 Batch 60
 Batch 80
 Batch 100
+Batch 120
 k=3
-torch.Size([98])
+torch.Size([95])
 draw color yellow
-draw sphere { 8.616667 6.9166665 10.6 } radius 0.5
+draw sphere { 9.466666 6.9166665 10.6 } radius 0.5
 19_Sim6_frame19_of_150.pdb
 19_Sim6_frame19_of_150_biased.pdb
 19_Sim6_frame19_of_150_bias.pdb
 translated_frame19_Sim6.pdb
-	Distance to iron: tensor(15.3117)
-	Closest atom this frame ILE356, HD13: 2.841346
-	Closest atom next frame ILE356, HD13: 2.718442
+	Distance to iron: tensor(15.8056)
+	Closest atom this frame ILE356, HD13: 3.210361
+	Closest atom next frame ILE356, HD12: 2.927315
 START: 20
-torch.Size([336, 3])
+torch.Size([368, 3])
 STEP: 20
 DOEN
-torch.Size([336, 3])
+torch.Size([368, 3])
 #################################
 Batch 20
 Batch 40
 Batch 60
 Batch 80
 Batch 100
+Batch 120
 k=3
-torch.Size([127])
+torch.Size([133])
 draw color blue
 draw sphere { 8.900001 8.333333 6.9166665 } radius 0.5
 20_Sim6_frame20_of_150.pdb
@@ -528,21 +523,21 @@ Batch 40
 Batch 60
 Batch 80
 k=3
-torch.Size([107])
+torch.Size([110])
 draw color green
-draw sphere { 9.183333 7.1999993 9.183333 } radius 0.5
+draw sphere { 8.333333 7.1999993 10.883334 } radius 0.5
 21_Sim6_frame21_of_150.pdb
 21_Sim6_frame21_of_150_biased.pdb
 21_Sim6_frame21_of_150_bias.pdb
 translated_frame21_Sim6.pdb
-	Distance to iron: tensor(14.8495)
-	Closest atom this frame ILE356, HD12: 2.285935
-	Closest atom next frame ILE356, HD12: 2.147296
+	Distance to iron: tensor(15.4833)
+	Closest atom this frame ILE356, HD12: 2.920120
+	Closest atom next frame ILE356, HD12: 2.657910
 START: 22
-torch.Size([301, 3])
+torch.Size([320, 3])
 STEP: 22
 DOEN
-torch.Size([301, 3])
+torch.Size([320, 3])
 #################################
 Batch 20
 Batch 40
@@ -550,21 +545,21 @@ Batch 60
 Batch 80
 Batch 100
 k=3
-torch.Size([117])
+torch.Size([127])
 draw color black
-draw sphere { 8.05 8.333333 10.883334 } radius 0.5
+draw sphere { 8.333333 8.05 10.883334 } radius 0.5
 22_Sim6_frame22_of_150.pdb
 22_Sim6_frame22_of_150_biased.pdb
 22_Sim6_frame22_of_150_bias.pdb
 translated_frame22_Sim6.pdb
 	Distance to iron: tensor(15.8963)
-	Closest atom this frame ILE207, HG21: 2.666357
-	Closest atom next frame ILE207, O: 2.878104
+	Closest atom this frame ILE207, HG21: 2.871967
+	Closest atom next frame ILE207, O: 3.256482
 START: 23
-torch.Size([313, 3])
+torch.Size([329, 3])
 STEP: 23
 DOEN
-torch.Size([313, 3])
+torch.Size([329, 3])
 #################################
 Batch 20
 Batch 40
@@ -572,15 +567,15 @@ Batch 60
 Batch 80
 Batch 100
 k=3
-torch.Size([89])
+torch.Size([103])
 draw color orange
-draw sphere { 8.616667 7.1999993 10.883334 } radius 0.5
+draw sphere { 8.616666 7.1999993 10.883334 } radius 0.5
 23_Sim6_frame23_of_150.pdb
 23_Sim6_frame23_of_150_biased.pdb
 23_Sim6_frame23_of_150_bias.pdb
 translated_frame23_Sim6.pdb
 	Distance to iron: tensor(15.6376)
-	Closest atom this frame VAL209, HG21: 3.106359
+	Closest atom this frame VAL209, HG21: 3.106358
 	Closest atom next frame ILE356, HD12: 3.258352
 START: 24
 torch.Size([369, 3])
@@ -595,7 +590,7 @@ Batch 80
 Batch 100
 Batch 120
 k=3
-torch.Size([122])
+torch.Size([133])
 draw color yellow
 draw sphere { 6.35 4.9333334 9.466666 } radius 0.5
 24_Sim6_frame24_of_150.pdb
@@ -613,7 +608,7 @@ torch.Size([113, 3])
 #################################
 Batch 20
 k=3
-torch.Size([57])
+torch.Size([58])
 draw color blue
 draw sphere { 8.333333 7.1999993 10.033334 } radius 0.5
 25_Sim6_frame25_of_150.pdb
@@ -635,7 +630,7 @@ Batch 60
 Batch 80
 Batch 100
 k=3
-torch.Size([90])
+torch.Size([101])
 draw color green
 draw sphere { 8.616666 7.1999993 10.883334 } radius 0.5
 26_Sim6_frame26_of_150.pdb
@@ -657,30 +652,29 @@ Batch 60
 Batch 80
 Batch 100
 k=3
-torch.Size([111])
+torch.Size([113])
 draw color black
-draw sphere { 8.616666 7.1999993 11.166667 } radius 0.5
+draw sphere { 8.616667 5.7833333 12.3 } radius 0.5
 27_Sim6_frame27_of_150.pdb
 27_Sim6_frame27_of_150_biased.pdb
 27_Sim6_frame27_of_150_bias.pdb
 translated_frame27_Sim6.pdb
-	Distance to iron: tensor(15.8361)
-	Closest atom this frame ILE207, HG23: 3.075933
-	Closest atom next frame ILE207, HG23: 3.847638
+	Distance to iron: tensor(16.0930)
+	Closest atom this frame VAL209, HB: 2.672703
+	Closest atom next frame VAL209, HB: 2.726584
 START: 28
-torch.Size([374, 3])
+torch.Size([346, 3])
 STEP: 28
 DOEN
-torch.Size([374, 3])
+torch.Size([346, 3])
 #################################
 Batch 20
 Batch 40
 Batch 60
 Batch 80
 Batch 100
-Batch 120
 k=3
-torch.Size([122])
+torch.Size([123])
 draw color orange
 draw sphere { 7.4833336 5.5 11.166667 } radius 0.5
 28_Sim6_frame28_of_150.pdb
@@ -701,7 +695,7 @@ Batch 40
 Batch 60
 Batch 80
 k=3
-torch.Size([102])
+torch.Size([108])
 draw color yellow
 draw sphere { 8.333333 6.35 10.883334 } radius 0.5
 29_Sim6_frame29_of_150.pdb
@@ -723,7 +717,7 @@ Batch 60
 Batch 80
 Batch 100
 k=3
-torch.Size([89])
+torch.Size([95])
 draw color blue
 draw sphere { 8.333333 7.1999993 10.883334 } radius 0.5
 30_Sim6_frame30_of_150.pdb
@@ -745,7 +739,7 @@ Batch 60
 Batch 80
 Batch 100
 k=3
-torch.Size([115])
+torch.Size([126])
 draw color green
 draw sphere { 8.333333 8.333333 8.9 } radius 0.5
 31_Sim6_frame31_of_150.pdb
@@ -767,9 +761,9 @@ Batch 60
 Batch 80
 Batch 100
 k=3
-torch.Size([95])
+torch.Size([100])
 draw color black
-draw sphere { 7.4833336 4.9333334 6.9166665 } radius 0.5
+draw sphere { 7.4833336 4.933333 6.9166665 } radius 0.5
 32_Sim6_frame32_of_150.pdb
 32_Sim6_frame32_of_150_biased.pdb
 32_Sim6_frame32_of_150_bias.pdb
@@ -820,7 +814,7 @@ Batch 280
 Batch 300
 Batch 320
 k=3, len(pos_embedding) 960
-torch.Size([370])
+torch.Size([381])
 draw color yellow
 draw sphere { 9.333333 7.6666665 4.6666665 } radius 0.5
 34_Sim6_frame34_of_150.pdb
@@ -847,7 +841,7 @@ Batch 160
 Batch 180
 Batch 200
 k=3, len(pos_embedding) 650
-torch.Size([257])
+torch.Size([279])
 draw color blue
 draw sphere { 9.666667 7.6666665 4.3333335 } radius 0.5
 35_Sim6_frame35_of_150.pdb
@@ -873,21 +867,21 @@ Batch 140
 Batch 160
 Batch 180
 k=3, len(pos_embedding) 540
-torch.Size([211])
+torch.Size([220])
 draw color green
-draw sphere { 12.0 10.333333 5.8333335 } radius 0.5
+draw sphere { 10.0 9.5 6.0 } radius 0.5
 36_Sim6_frame36_of_150.pdb
 36_Sim6_frame36_of_150_biased.pdb
 36_Sim6_frame36_of_150_bias.pdb
 translated_frame36_Sim6.pdb
-	Distance to iron: tensor(16.8762)
-	Closest atom this frame PRO347, HG3: 2.712992
-	Closest atom next frame PRO347, HG2: 2.383427
+	Distance to iron: tensor(15.0416)
+	Closest atom this frame ALA354, HB1: 2.043000
+	Closest atom next frame PRO347, HG2: 1.470388
 START: 37
-torch.Size([1247, 3])
+torch.Size([1257, 3])
 STEP: 37
 DOEN
-torch.Size([1247, 3])
+torch.Size([1257, 3])
 #################################
 Batch 20
 Batch 40
@@ -909,22 +903,22 @@ Batch 340
 Batch 360
 Batch 380
 Batch 400
-k=3, len(pos_embedding) 1247
-torch.Size([337])
+k=3, len(pos_embedding) 1257
+torch.Size([424])
 draw color black
-draw sphere { 8.5 8.333333 7.3333335 } radius 0.5
+draw sphere { 8.0 7.1666665 7.0 } radius 0.5
 37_Sim6_frame37_of_150.pdb
 37_Sim6_frame37_of_150_biased.pdb
 37_Sim6_frame37_of_150_bias.pdb
 translated_frame37_Sim6.pdb
-	Distance to iron: tensor(13.9811)
-	Closest atom this frame ILE207, HB: 2.109701
-	Closest atom next frame ILE207, HD11: 1.461737
+	Distance to iron: tensor(12.8203)
+	Closest atom this frame ILE207, HG21: 2.024273
+	Closest atom next frame ILE207, HG23: 1.236184
 START: 38
-torch.Size([1162, 3])
+torch.Size([768, 3])
 STEP: 38
 DOEN
-torch.Size([1162, 3])
+torch.Size([768, 3])
 #################################
 Batch 20
 Batch 40
@@ -938,103 +932,51 @@ Batch 180
 Batch 200
 Batch 220
 Batch 240
-Batch 260
-Batch 280
-Batch 300
-Batch 320
-Batch 340
-Batch 360
-Batch 380
-k=3, len(pos_embedding) 1162
-torch.Size([464])
+k=3, len(pos_embedding) 768
+torch.Size([367])
 draw color orange
-draw sphere { 5.6666665 10.5 4.1666665 } radius 0.5
+draw sphere { 4.8333335 8.666667 3.8333333 } radius 0.5
 38_Sim6_frame38_of_150.pdb
 38_Sim6_frame38_of_150_biased.pdb
 38_Sim6_frame38_of_150_bias.pdb
 translated_frame38_Sim6.pdb
-	Distance to iron: tensor(12.6381)
-	Closest atom this frame ILE207, HG12: 1.788758
-	Closest atom next frame ILE207, HD11: 1.116142
+	Distance to iron: tensor(10.6380)
+	Closest atom this frame ILE207, HG13: 2.110555
+	Closest atom next frame ILE207, HD13: 1.730025
 START: 39
-torch.Size([474, 3])
+SPACE: 0.5
+torch.Size([65, 3])
 STEP: 39
 DOEN
-torch.Size([474, 3])
+torch.Size([65, 3])
 #################################
 Batch 20
-Batch 40
-Batch 60
-Batch 80
-Batch 100
-Batch 120
-Batch 140
-k=3, len(pos_embedding) 474
-torch.Size([143])
+k=2
+torch.Size([16])
 draw color yellow
-draw sphere { 3.3333333 6.6666665 3.5 } radius 0.5
+draw sphere { 3.0 5.5 2.75 } radius 0.5
 39_Sim6_frame39_of_150.pdb
 39_Sim6_frame39_of_150_biased.pdb
 39_Sim6_frame39_of_150_bias.pdb
 translated_frame39_Sim6.pdb
-	Distance to iron: tensor(8.2344)
-	Closest atom this frame PHE366, HB3: 2.136883
-	Closest atom next frame PHE366, HB3: 1.630937
+	Distance to iron: tensor(6.8420)
+	Closest atom this frame PHE366, CD2: 2.193772
+	Closest atom next frame PHE366, CD2: 1.484084
 START: 40
-SPACE: 0.45
-torch.Size([34, 3])
+SPACE: 0.4
+torch.Size([55, 3])
 STEP: 40
 DOEN
-torch.Size([34, 3])
+torch.Size([55, 3])
 #################################
 k=2
-5 0.5
-6 0.25
-torch.Size([6])
+torch.Size([13])
 draw color blue
-draw sphere { 4.1 3.65 2.975 } radius 0.5
+draw sphere { 4.0 3.0 2.6 } radius 0.5
 40_Sim6_frame40_of_150.pdb
 40_Sim6_frame40_of_150_biased.pdb
 40_Sim6_frame40_of_150_bias.pdb
 translated_frame40_Sim6.pdb
-	Distance to iron: tensor(6.2436)
-	Closest atom this frame PHE366, CZ: 2.272357
-	Closest atom next frame ILE345, HG13: 1.861307
-START: 41
-SPACE: 0.4
-torch.Size([33, 3])
-STEP: 41
-DOEN
-torch.Size([33, 3])
-#################################
-k=2
-torch.Size([6])
-draw color green
-draw sphere { 3.8 4.8 1.4 } radius 0.5
-41_Sim6_frame41_of_150.pdb
-41_Sim6_frame41_of_150_biased.pdb
-41_Sim6_frame41_of_150_bias.pdb
-translated_frame41_Sim6.pdb
-	Distance to iron: tensor(6.2801)
-	Closest atom this frame PHE366, HE2: 2.144454
-	Closest atom next frame ILE345, HG22: 2.127949
-START: 42
-SPACE: 0.4
-torch.Size([141, 3])
-STEP: 42
-DOEN
-torch.Size([141, 3])
-#################################
-Batch 20
-Batch 40
-k=3
-torch.Size([114])
-draw color black
-draw sphere { 3.5333335 2.3333333 2.6 } radius 0.5
-42_Sim6_frame42_of_150.pdb
-42_Sim6_frame42_of_150_biased.pdb
-42_Sim6_frame42_of_150_bias.pdb
-translated_frame42_Sim6.pdb
-	Distance to iron: tensor(4.9688)
-	Closest atom this frame PHE366, HZ: 2.217892
-	Closest atom next frame LEU343, HD12: 1.653153
+	Distance to iron: tensor(5.6356)
+	Closest atom this frame HIS374, HB2: 2.200594
+	Closest atom next frame ILE345, HG13: 1.933943

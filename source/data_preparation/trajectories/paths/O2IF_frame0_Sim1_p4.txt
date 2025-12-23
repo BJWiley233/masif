@@ -1,0 +1,576 @@
+Sim=1
+
+end=150
+start=0
+frames = torch.arange(0, end, dtype=torch.float32)  # [0,1,...,N-1]
+frame_norm = frames / (end - start)    
+frame_emb = sinusoidal_embedding(frame_norm, dim=16)
+
+
+frame_pos=torch.tensor([-1.1, -5.1, -12.3]) # 0 equil  # p4 high
+# frame_pos=torch.tensor([-4.0, 2.5, -16.5]) # 0 equil  # p4 low
+# frame_pos=torch.tensor([7.6, 4.6, -9.6]) # p4 curved; try for Sim6? 
+# frame_pos=torch.tensor([-11.1, -13.0, -0.2]) # 0 equil p1 
+# frame_pos=torch.tensor([13.4, -6.0, 8.7]) #0 equil pr high  
+
+
+bias_r=1.
+space=0.85
+distance=torch.norm(frame_pos)
+start=1
+# start=start=19901
+step=1
+# frame_pos=torch.tensor([4.75, 12.5, 2.0])
+# frame_pos=torch.tensor([3.7150002, 8.305, 3.8])
+for start in range(start+0,start+149):
+    distance=torch.norm(frame_pos)
+    torch.cuda.empty_cache()
+    color=colors[start % 5]
+    print("START:", start)
+    protein_coords_traj = xyz[start,nogas,:]
+    translated = protein_coords_traj - protein_coords_traj.cpu()[cat].numpy() 
+    
+    new_traj = md.Trajectory(xyz=((xyz[start]-protein_coords_traj.cpu()[cat].numpy())/10).numpy(), topology=traj.topology)
+    new_traj.save('translated_frame%d_Sim%d.pdb'%(start,Sim))
+
+    protein_coords_traj2 = xyz[start+1,protein_cofactors,:]
+    translated2 = protein_coords_traj2 - protein_coords_traj2.cpu()[cat].numpy()
+
+    
+
+    if distance > 12:
+        xyz2=get_points(start, translated, frame_pos, space=space, bottom_threshold=2.0, top_threshold=4.5, radius=5)
+    else:
+        if distance < 7.5:
+            space=0.4
+            radius=3.
+            threshold=2.
+        elif distance < 9:
+            space=0.45
+            radius=3.5
+            threshold=2.
+        else:
+            space=0.5
+            radius=4.1
+            threshold=2.0
+        print("SPACE:",space)
+        xyz2=get_points(start, translated, frame_pos, space=space, bottom_threshold=threshold, top_threshold=4.5, radius=radius, distance_to=distance)
+    print(xyz2.shape)
+    if xyz2.shape[0] < 6:
+        xyz2=get_points(start, translated, frame_pos, space=0.45, bottom_threshold=2.1)
+        print(xyz2.shape)
+# embed_predict and get highest next point to be the next frame_pos at 2...end
+    
+    if distance >= 2:
+        xyz2, pos_embedding = embed(xyz2, step=step, protein_coords_list=translated,protein_cofactors=protein_cofactors,global_to_local=global_to_local, radius=6, frame_emb=frame_emb)
+
+    
+    if distance >= 2:
+        print('#################################')
+        torch.cuda.empty_cache()
+        index, frame_pos__, results = predict(pos_embedding, model='/home/coyote/Carmen/Oxygenases/PHD2/PHD2_O2QD/Sim5/model18_FE2dis_inr3.pt', bs=2,frame_emb_bool=True, node_input_bool=False, atom_as_node_attr=False)
+        torch.cuda.empty_cache()
+     
+
+    if distance > 8:
+        # bias=get_fe_bias(xyz2, frame_pos, alpha=500.0, beta=0.001, denom=4, range_=bias_r, point=[-5.358,2.008,-1.704])
+        bias=get_fe_bias(xyz2, frame_pos, alpha=500.0, beta=0.001, denom=4, range_=bias_r, point=[0,0,0])
+    else:
+        bias=get_fe_bias(xyz2, frame_pos, alpha=500.0, beta=0.001, denom=4, range_=bias_r)
+    results_biased = results * (1+bias.to('cuda'))
+    total_positives = (results_biased>0.5).sum()
+    if len(pos_embedding) < 500:
+        if (distance < 10 and total_positives < 5) or len(pos_embedding)==1:
+            print("k=1")
+            scores, points = topk_with_radius(results_biased, pos_embedding, k=1, radius=1, threshold=1.)
+        elif distance < 12 and total_positives < 20:
+            print("k=2")
+            scores, points = topk_with_radius(results_biased, pos_embedding, k=2, radius=1, threshold=0.5)
+        else:
+            print("k=3")
+            scores, points = topk_with_radius(results_biased, pos_embedding, k=3, radius=2, threshold=0.5)
+    else:
+        print("k=3, len(pos_embedding)", len(pos_embedding))
+        scores, points = topk_with_radius(results_biased, pos_embedding, k=3, radius=3, threshold=0.5)
+
+    top10 = sorted(scores.items(), key=lambda x: x[1]['group_density'], reverse=True)[:1]
+    for key, vals in top10:
+        frame_pos=points[vals['nn_idx']].mean(axis=0)
+        print("draw color %s" % color)
+        # print(key, vals['group_density'], points[vals['nn_idx']].mean(axis=0))
+        print("draw sphere {",frame_pos.numpy()[0],frame_pos.numpy()[1],frame_pos.numpy()[2],"} radius 0.5")
+
+    
+    frame_pos_bests.append(frame_pos)
+    frame_pos_bests_dist.append(torch.norm(frame_pos))
+    write_pdb2(torch.arange(0,len(pos_embedding)),results,xyz2[:,0],xyz2[:,1],xyz2[:,2], file=str(start)+ '_Sim%d_frame'%Sim + str(step) + '_of_' + str((end)) + '.pdb')
+    write_pdb2(torch.arange(0,len(pos_embedding)),results_biased,xyz2[:,0],xyz2[:,1],xyz2[:,2], file=str(start)+ '_Sim%d_frame'%Sim + str(step) + '_of_' + str((end)) + '_biased.pdb')
+    write_pdb2(torch.arange(0,len(pos_embedding)),bias,xyz2[:,0],xyz2[:,1],xyz2[:,2], file=str(start)+ '_Sim%d_frame'%Sim + str(step) + '_of_' + str((end)) + '_bias.pdb')
+    print('translated_frame%d_Sim%d.pdb'%(start,Sim))
+    step+=1
+
+    print("\tDistance to iron:", frame_pos_bests_dist[-1])
+    
+    d2=torch.norm(translated-frame_pos, dim=1)
+    d3=torch.norm(translated2-frame_pos, dim=1)
+    try:
+        print("\tClosest atom this frame %s, %s: %f" % (rnames2[d2.argmin()], anames2[d2.argmin()], d2.min()))
+        print("\tClosest atom next frame %s, %s: %f" % (rnames2[d3.argmin()], anames2[d3.argmin()], d3.min()))
+    except:
+        print("Closest or another oxygen")
+    if frame_pos_bests_dist[-1] > 21:
+        break
+    if frame_pos_bests_dist[-1] < 6:
+        break
+
+
+START: 1
+torch.Size([379, 3])
+STEP: 1
+DOEN
+#################################
+Batch 20
+Batch 40
+Batch 60
+Batch 80
+Batch 100
+Batch 120
+Batch 140
+Batch 160
+Batch 180
+k=3
+torch.Size([99])
+draw color green
+draw sphere { 0.116666675 -3.8499997 -9.516666 } radius 0.5
+1_Sim1_frame1_of_150.pdb
+1_Sim1_frame1_of_150_biased.pdb
+1_Sim1_frame1_of_150_bias.pdb
+translated_frame1_Sim1.pdb
+	Distance to iron: tensor(10.2666)
+	Closest atom this frame VAL311, HB: 2.127141
+	Closest atom next frame VAL311, HG22: 1.841585
+START: 2
+SPACE: 0.5
+torch.Size([609, 3])
+STEP: 2
+DOEN
+#################################
+Batch 20
+Batch 40
+Batch 60
+Batch 80
+Batch 100
+Batch 120
+Batch 140
+Batch 160
+Batch 180
+Batch 200
+Batch 220
+Batch 240
+Batch 260
+Batch 280
+Batch 300
+k=3, len(pos_embedding) 609
+torch.Size([100])
+draw color black
+draw sphere { -1.8333334 -3.3333333 -6.5 } radius 0.5
+2_Sim1_frame2_of_150.pdb
+2_Sim1_frame2_of_150_biased.pdb
+2_Sim1_frame2_of_150_bias.pdb
+translated_frame2_Sim1.pdb
+	Distance to iron: tensor(7.5314)
+	Closest atom this frame TYR310, HE1: 2.191417
+	Closest atom next frame VAL311, HG22: 1.698878
+START: 3
+SPACE: 0.45
+torch.Size([7, 3])
+STEP: 3
+DOEN
+#################################
+k=1
+2 1.0
+2 0.5
+2 0.5
+2 0.25
+2 0.25
+2 0.125
+2 0.125
+3 0.0625
+torch.Size([3])
+draw color orange
+draw sphere { -3.1 -2.65 -8.05 } radius 0.5
+3_Sim1_frame3_of_150.pdb
+3_Sim1_frame3_of_150_biased.pdb
+3_Sim1_frame3_of_150_bias.pdb
+translated_frame3_Sim1.pdb
+	Distance to iron: tensor(9.0241)
+	Closest atom this frame VAL311, HG22: 2.067555
+	Closest atom next frame VAL311, HG22: 1.662291
+START: 4
+SPACE: 0.5
+torch.Size([43, 3])
+STEP: 4
+DOEN
+#################################
+Batch 20
+k=2
+torch.Size([7])
+draw color yellow
+draw sphere { -2.75 -4.0 -11.0 } radius 0.5
+4_Sim1_frame4_of_150.pdb
+4_Sim1_frame4_of_150_biased.pdb
+4_Sim1_frame4_of_150_bias.pdb
+translated_frame4_Sim1.pdb
+	Distance to iron: tensor(12.0234)
+	Closest atom this frame VAL311, HG23: 2.064144
+	Closest atom next frame LEU562, HD22: 1.481901
+START: 5
+torch.Size([1179, 3])
+STEP: 5
+DOEN
+#################################
+Batch 20
+Batch 40
+Batch 60
+Batch 80
+Batch 100
+Batch 120
+Batch 140
+Batch 160
+Batch 180
+Batch 200
+Batch 220
+Batch 240
+Batch 260
+Batch 280
+Batch 300
+Batch 320
+Batch 340
+Batch 360
+Batch 380
+Batch 400
+Batch 420
+Batch 440
+Batch 460
+Batch 480
+Batch 500
+Batch 520
+Batch 540
+Batch 560
+Batch 580
+k=3, len(pos_embedding) 1179
+torch.Size([430])
+draw color blue
+draw sphere { -3.6666667 -5.0 -10.666667 } radius 0.5
+5_Sim1_frame5_of_150.pdb
+5_Sim1_frame5_of_150_biased.pdb
+5_Sim1_frame5_of_150_bias.pdb
+translated_frame5_Sim1.pdb
+	Distance to iron: tensor(12.3378)
+	Closest atom this frame VAL311, HG23: 2.228705
+	Closest atom next frame VAL311, HG23: 2.065404
+START: 6
+torch.Size([1297, 3])
+STEP: 6
+DOEN
+#################################
+Batch 20
+Batch 40
+Batch 60
+Batch 80
+Batch 100
+Batch 120
+Batch 140
+Batch 160
+Batch 180
+Batch 200
+Batch 220
+Batch 240
+Batch 260
+Batch 280
+Batch 300
+Batch 320
+Batch 340
+Batch 360
+Batch 380
+Batch 400
+Batch 420
+Batch 440
+Batch 460
+Batch 480
+Batch 500
+Batch 520
+Batch 540
+Batch 560
+Batch 580
+Batch 600
+Batch 620
+Batch 640
+k=3, len(pos_embedding) 1297
+torch.Size([326])
+draw color green
+draw sphere { -2.5 -2.3333333 -7.3333335 } radius 0.5
+6_Sim1_frame6_of_150.pdb
+6_Sim1_frame6_of_150_biased.pdb
+6_Sim1_frame6_of_150_bias.pdb
+translated_frame6_Sim1.pdb
+	Distance to iron: tensor(8.0915)
+	Closest atom this frame TYR310, HE1: 2.011004
+	Closest atom next frame TYR310, HE1: 2.164390
+START: 7
+SPACE: 0.45
+torch.Size([11, 3])
+STEP: 7
+DOEN
+#################################
+k=2
+torch.Size([9])
+draw color black
+draw sphere { -2.2 -2.2 -7.375 } radius 0.5
+7_Sim1_frame7_of_150.pdb
+7_Sim1_frame7_of_150_biased.pdb
+7_Sim1_frame7_of_150_bias.pdb
+translated_frame7_Sim1.pdb
+	Distance to iron: tensor(8.0044)
+	Closest atom this frame HIS313, HB2: 2.119143
+	Closest atom next frame VAL311, HG22: 1.655510
+START: 8
+SPACE: 0.45
+torch.Size([15, 3])
+STEP: 8
+DOEN
+#################################
+k=1
+1 1.0
+3 0.5
+torch.Size([3])
+draw color orange
+draw sphere { -3.55 -2.65 -8.05 } radius 0.5
+8_Sim1_frame8_of_150.pdb
+8_Sim1_frame8_of_150_biased.pdb
+8_Sim1_frame8_of_150_bias.pdb
+translated_frame8_Sim1.pdb
+	Distance to iron: tensor(9.1884)
+	Closest atom this frame VAL311, HG22: 2.106839
+	Closest atom next frame ILE251, HG21: 1.703094
+START: 9
+SPACE: 0.5
+torch.Size([28, 3])
+STEP: 9
+DOEN
+#################################
+k=3
+torch.Size([24])
+draw color yellow
+draw sphere { -3.5 -5.0 -10.5 } radius 0.5
+9_Sim1_frame9_of_150.pdb
+9_Sim1_frame9_of_150_biased.pdb
+9_Sim1_frame9_of_150_bias.pdb
+translated_frame9_Sim1.pdb
+	Distance to iron: tensor(12.1450)
+	Closest atom this frame VAL311, HG23: 2.085805
+	Closest atom next frame VAL311, HG23: 1.626480
+START: 10
+torch.Size([1119, 3])
+STEP: 10
+DOEN
+#################################
+Batch 20
+Batch 40
+Batch 60
+Batch 80
+Batch 100
+Batch 120
+Batch 140
+Batch 160
+Batch 180
+Batch 200
+Batch 220
+Batch 240
+Batch 260
+Batch 280
+Batch 300
+Batch 320
+Batch 340
+Batch 360
+Batch 380
+Batch 400
+Batch 420
+Batch 440
+Batch 460
+Batch 480
+Batch 500
+Batch 520
+Batch 540
+Batch 560
+k=3, len(pos_embedding) 1119
+torch.Size([323])
+draw color blue
+draw sphere { -1.8333334 -3.0 -7.3333335 } radius 0.5
+10_Sim1_frame10_of_150.pdb
+10_Sim1_frame10_of_150_biased.pdb
+10_Sim1_frame10_of_150_bias.pdb
+translated_frame10_Sim1.pdb
+	Distance to iron: tensor(8.1326)
+	Closest atom this frame VAL311, HG22: 2.180273
+	Closest atom next frame VAL311, HG22: 1.574028
+START: 11
+SPACE: 0.45
+torch.Size([16, 3])
+STEP: 11
+DOEN
+#################################
+k=2
+torch.Size([10])
+draw color green
+draw sphere { -0.4 -3.775 -9.4 } radius 0.5
+11_Sim1_frame11_of_150.pdb
+11_Sim1_frame11_of_150_biased.pdb
+11_Sim1_frame11_of_150_bias.pdb
+translated_frame11_Sim1.pdb
+	Distance to iron: tensor(10.1376)
+	Closest atom this frame VAL311, HG22: 2.104069
+	Closest atom next frame VAL311, HG22: 1.959496
+START: 12
+SPACE: 0.5
+torch.Size([439, 3])
+STEP: 12
+DOEN
+#################################
+Batch 20
+Batch 40
+Batch 60
+Batch 80
+Batch 100
+Batch 120
+Batch 140
+Batch 160
+Batch 180
+Batch 200
+Batch 220
+k=3
+torch.Size([124])
+draw color black
+draw sphere { -0.6666667 -4.0 -10.333333 } radius 0.5
+12_Sim1_frame12_of_150.pdb
+12_Sim1_frame12_of_150_biased.pdb
+12_Sim1_frame12_of_150_bias.pdb
+translated_frame12_Sim1.pdb
+	Distance to iron: tensor(11.1005)
+	Closest atom this frame VAL311, HG23: 2.303847
+	Closest atom next frame VAL311, HB: 2.270025
+START: 13
+SPACE: 0.5
+torch.Size([803, 3])
+STEP: 13
+DOEN
+#################################
+Batch 20
+Batch 40
+Batch 60
+Batch 80
+Batch 100
+Batch 120
+Batch 140
+Batch 160
+Batch 180
+Batch 200
+Batch 220
+Batch 240
+Batch 260
+Batch 280
+Batch 300
+Batch 320
+Batch 340
+Batch 360
+Batch 380
+Batch 400
+k=3, len(pos_embedding) 803
+torch.Size([160])
+draw color orange
+draw sphere { -0.6666667 -2.6666667 -8.0 } radius 0.5
+13_Sim1_frame13_of_150.pdb
+13_Sim1_frame13_of_150_biased.pdb
+13_Sim1_frame13_of_150_bias.pdb
+translated_frame13_Sim1.pdb
+	Distance to iron: tensor(8.4591)
+	Closest atom this frame VAL311, HG22: 2.108075
+	Closest atom next frame VAL311, HG22: 1.560254
+START: 14
+SPACE: 0.45
+torch.Size([47, 3])
+STEP: 14
+DOEN
+#################################
+Batch 20
+k=2
+torch.Size([10])
+draw color yellow
+draw sphere { -2.2 -2.4250002 -5.575 } radius 0.5
+14_Sim1_frame14_of_150.pdb
+14_Sim1_frame14_of_150_biased.pdb
+14_Sim1_frame14_of_150_bias.pdb
+translated_frame14_Sim1.pdb
+	Distance to iron: tensor(6.4654)
+	Closest atom this frame TYR310, HE1: 2.023465
+	Closest atom next frame TYR310, HE1: 1.339708
+START: 15
+SPACE: 0.4
+torch.Size([1, 3])
+torch.Size([4, 3])
+STEP: 15
+DOEN
+#################################
+k=1
+0 1.0
+1 0.5
+1 0.5
+1 0.25
+1 0.25
+2 0.125
+2 0.125
+2 0.0625
+2 0.0625
+2 0.03125
+2 0.03125
+2 0.015625
+2 0.015625
+2 0.0078125
+2 0.0078125
+2 0.00390625
+2 0.00390625
+2 0.001953125
+2 0.001953125
+3 0.0009765625
+torch.Size([3])
+draw color blue
+draw sphere { -0.65 -4.7 -2.9 } radius 0.5
+15_Sim1_frame15_of_150.pdb
+15_Sim1_frame15_of_150_biased.pdb
+15_Sim1_frame15_of_150_bias.pdb
+translated_frame15_Sim1.pdb
+	Distance to iron: tensor(5.5608)
+	Closest atom this frame TYR310, HB2: 2.136543
+	Closest atom next frame TYR310, HB2: 1.371952
+
+
+START: 15
+SPACE: 0.4
+torch.Size([1, 3])
+torch.Size([23, 3])
+STEP: 15
+DOEN
+#################################
+k=2
+5 0.5
+7 0.25
+torch.Size([7])
+draw color blue
+draw sphere { -0.8 -4.4 -3.0 } radius 0.5
+15_Sim1_frame15_of_150.pdb
+15_Sim1_frame15_of_150_biased.pdb
+15_Sim1_frame15_of_150_bias.pdb
+translated_frame15_Sim1.pdb
+	Distance to iron: tensor(5.3852)
+	Closest atom this frame HIS313, HE1: 2.146279
+	Closest atom next frame TYR310, HB2: 1.637985

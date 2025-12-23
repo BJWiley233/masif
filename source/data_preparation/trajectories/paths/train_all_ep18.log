@@ -1,0 +1,518 @@
+3107
+8883
+12903
+13271
+15444
+15834
+18252
+20162
+31260
+89110
+129649
+133349
+155289
+159189
+183459
+202773
+23718
+23718
+40449
+40832
+47357
+238333
+238333
+406128
+409958
+475339
+Len + 47357; Len -  124952; ratio 2.638511730050468
+Epoch 19, Batch 20 | Acc: 0.9250 | PosAcc: 0.9130 | NegAcc: 0.9298
+Epoch 19, Batch 40 | Acc: 0.9156 | PosAcc: 0.8750 | NegAcc: 0.9310
+Epoch 19, Batch 60 | Acc: 0.9146 | PosAcc: 0.8672 | NegAcc: 0.9318
+Epoch 19, Batch 80 | Acc: 0.9156 | PosAcc: 0.8827 | NegAcc: 0.9284
+Epoch 19, Batch 100 | Acc: 0.8988 | PosAcc: 0.8811 | NegAcc: 0.9058
+Epoch 19, Batch 120 | Acc: 0.9000 | PosAcc: 0.8791 | NegAcc: 0.9083
+Epoch 19, Batch 140 | Acc: 0.8911 | PosAcc: 0.8754 | NegAcc: 0.8971
+Epoch 19, Batch 160 | Acc: 0.8922 | PosAcc: nan | NegAcc: 0.8985
+Epoch 19, Batch 180 | Acc: 0.8958 | PosAcc: 0.8798 | NegAcc: 0.9023
+Epoch 19, Batch 200 | Acc: 0.8900 | PosAcc: 0.8731 | NegAcc: 0.8968
+Epoch 19, Batch 220 | Acc: 0.8886 | PosAcc: 0.8717 | NegAcc: 0.8953
+Epoch 19, Batch 240 | Acc: 0.8885 | PosAcc: 0.8675 | NegAcc: 0.8970
+Epoch 19, Batch 260 | Acc: 0.8880 | PosAcc: 0.8660 | NegAcc: 0.8968
+Epoch 19, Batch 280 | Acc: 0.8884 | PosAcc: nan | NegAcc: 0.8996
+Epoch 19, Batch 300 | Acc: 0.8871 | PosAcc: 0.8584 | NegAcc: 0.8984
+Epoch 19, Batch 320 | Acc: 0.8898 | PosAcc: 0.8613 | NegAcc: 0.9010
+Epoch 19, Batch 340 | Acc: 0.8912 | PosAcc: 0.8619 | NegAcc: 0.9028
+Epoch 19, Batch 360 | Acc: 0.8913 | PosAcc: 0.8599 | NegAcc: 0.9038
+Epoch 19, Batch 380 | Acc: 0.8888 | PosAcc: 0.8608 | NegAcc: 0.8999
+Epoch 19, Batch 400 | Acc: 0.8900 | PosAcc: 0.8584 | NegAcc: 0.9026
+Epoch 19, Batch 420 | Acc: 0.8902 | PosAcc: 0.8585 | NegAcc: 0.9027
+Epoch 19, Batch 440 | Acc: 0.8892 | PosAcc: nan | NegAcc: 0.9019
+Epoch 19, Batch 460 | Acc: 0.8913 | PosAcc: 0.8594 | NegAcc: 0.9037
+Epoch 19, Batch 480 | Acc: 0.8896 | PosAcc: 0.8574 | NegAcc: 0.9021
+Epoch 19, Batch 500 | Acc: 0.8908 | PosAcc: 0.8583 | NegAcc: 0.9033
+Epoch 19, Batch 520 | Acc: 0.8906 | PosAcc: 0.8607 | NegAcc: 0.9022
+Epoch 19, Batch 540 | Acc: 0.8898 | PosAcc: 0.8588 | NegAcc: 0.9018
+Epoch 19, Batch 560 | Acc: 0.8897 | PosAcc: 0.8585 | NegAcc: 0.9018
+Epoch 19, Batch 580 | Acc: 0.8899 | PosAcc: 0.8610 | NegAcc: 0.9011
+Epoch 19, Batch 600 | Acc: 0.8890 | PosAcc: 0.8585 | NegAcc: 0.9009
+Epoch 19, Batch 620 | Acc: 0.8887 | PosAcc: 0.8596 | NegAcc: 0.9001
+Epoch 19, Batch 640 | Acc: 0.8891 | PosAcc: 0.8612 | NegAcc: 0.9001
+Epoch 19, Batch 660 | Acc: 0.8888 | PosAcc: 0.8605 | NegAcc: 0.9000
+Epoch 19, Batch 680 | Acc: 0.8882 | PosAcc: 0.8583 | NegAcc: 0.9000
+Epoch 19, Batch 700 | Acc: 0.8884 | PosAcc: 0.8590 | NegAcc: 0.9000
+Epoch 19, Batch 720 | Acc: 0.8894 | PosAcc: 0.8613 | NegAcc: 0.9005
+Epoch 19, Batch 740 | Acc: 0.8897 | PosAcc: 0.8620 | NegAcc: 0.9007
+Epoch 19, Batch 760 | Acc: 0.8905 | PosAcc: 0.8628 | NegAcc: 0.9014
+Epoch 19, Batch 780 | Acc: 0.8909 | PosAcc: 0.8621 | NegAcc: 0.9023
+Epoch 19, Batch 800 | Acc: 0.8919 | PosAcc: 0.8647 | NegAcc: 0.9027
+Epoch 19, Batch 820 | Acc: 0.8927 | PosAcc: 0.8663 | NegAcc: 0.9032
+Epoch 19, Batch 840 | Acc: 0.8924 | PosAcc: 0.8664 | NegAcc: 0.9029
+Epoch 19, Batch 860 | Acc: 0.8914 | PosAcc: 0.8654 | NegAcc: 0.9017
+Epoch 19, Batch 880 | Acc: 0.8916 | PosAcc: 0.8645 | NegAcc: 0.9023
+Epoch 19, Batch 900 | Acc: 0.8915 | PosAcc: 0.8656 | NegAcc: 0.9018
+Epoch 19, Batch 920 | Acc: 0.8916 | PosAcc: 0.8656 | NegAcc: 0.9018
+Epoch 19, Batch 940 | Acc: 0.8914 | PosAcc: 0.8666 | NegAcc: 0.9011
+Epoch 19, Batch 960 | Acc: 0.8904 | PosAcc: 0.8656 | NegAcc: 0.9000
+Epoch 19, Batch 980 | Acc: 0.8901 | PosAcc: 0.8661 | NegAcc: 0.8994
+Epoch 19, Batch 1000 | Acc: 0.8898 | PosAcc: 0.8673 | NegAcc: 0.8986
+Epoch 19, Batch 1020 | Acc: 0.8897 | PosAcc: 0.8684 | NegAcc: 0.8981
+Epoch 19, Batch 1040 | Acc: 0.8894 | PosAcc: 0.8681 | NegAcc: 0.8978
+Epoch 19, Batch 1060 | Acc: 0.8892 | PosAcc: 0.8688 | NegAcc: 0.8971
+Epoch 19, Batch 1080 | Acc: 0.8896 | PosAcc: 0.8691 | NegAcc: 0.8976
+Epoch 19, Batch 1100 | Acc: 0.8894 | PosAcc: 0.8697 | NegAcc: 0.8971
+Epoch 19, Batch 1120 | Acc: 0.8896 | PosAcc: 0.8695 | NegAcc: 0.8975
+Epoch 19, Batch 1140 | Acc: 0.8906 | PosAcc: 0.8706 | NegAcc: 0.8984
+Epoch 19, Batch 1160 | Acc: 0.8908 | PosAcc: 0.8713 | NegAcc: 0.8985
+Epoch 19, Batch 1180 | Acc: 0.8907 | PosAcc: 0.8713 | NegAcc: 0.8983
+Epoch 19, Batch 1200 | Acc: 0.8904 | PosAcc: 0.8719 | NegAcc: 0.8977
+Epoch 19, Batch 1220 | Acc: 0.8909 | PosAcc: 0.8723 | NegAcc: 0.8981
+Epoch 19, Batch 1240 | Acc: 0.8911 | PosAcc: 0.8727 | NegAcc: 0.8983
+Epoch 19, Batch 1260 | Acc: 0.8904 | PosAcc: 0.8717 | NegAcc: 0.8977
+Epoch 19, Batch 1280 | Acc: 0.8901 | PosAcc: 0.8718 | NegAcc: 0.8973
+Epoch 19, Batch 1300 | Acc: 0.8904 | PosAcc: 0.8727 | NegAcc: 0.8973
+Epoch 19, Batch 1320 | Acc: 0.8902 | PosAcc: nan | NegAcc: 0.8971
+Epoch 19, Batch 1340 | Acc: 0.8901 | PosAcc: 0.8720 | NegAcc: 0.8973
+Epoch 19, Batch 1360 | Acc: 0.8903 | PosAcc: 0.8715 | NegAcc: 0.8978
+Epoch 19, Batch 1380 | Acc: 0.8909 | PosAcc: 0.8722 | NegAcc: 0.8982
+Epoch 19, Batch 1400 | Acc: 0.8909 | PosAcc: 0.8725 | NegAcc: 0.8981
+Epoch 19, Batch 1420 | Acc: 0.8910 | PosAcc: 0.8731 | NegAcc: 0.8981
+Epoch 19, Batch 1440 | Acc: 0.8908 | PosAcc: 0.8719 | NegAcc: 0.8982
+Epoch 19, Batch 1460 | Acc: 0.8913 | PosAcc: 0.8729 | NegAcc: 0.8985
+Epoch 19, Batch 1480 | Acc: 0.8914 | PosAcc: 0.8734 | NegAcc: 0.8985
+Epoch 19, Batch 1500 | Acc: 0.8918 | PosAcc: 0.8727 | NegAcc: 0.8994
+Epoch 19, Batch 1520 | Acc: 0.8921 | PosAcc: 0.8733 | NegAcc: 0.8995
+Epoch 19, Batch 1540 | Acc: 0.8922 | PosAcc: 0.8736 | NegAcc: 0.8995
+Epoch 19, Batch 1560 | Acc: 0.8920 | PosAcc: 0.8733 | NegAcc: 0.8993
+Epoch 19, Batch 1580 | Acc: 0.8922 | PosAcc: 0.8738 | NegAcc: 0.8995
+Epoch 19, Batch 1600 | Acc: 0.8926 | PosAcc: 0.8740 | NegAcc: 0.8999
+Epoch 19, Batch 1620 | Acc: 0.8924 | PosAcc: 0.8728 | NegAcc: 0.9001
+Epoch 19, Batch 1640 | Acc: 0.8924 | PosAcc: 0.8726 | NegAcc: 0.9002
+Epoch 19, Batch 1660 | Acc: 0.8923 | PosAcc: 0.8721 | NegAcc: 0.9003
+Epoch 19, Batch 1680 | Acc: 0.8922 | PosAcc: 0.8712 | NegAcc: 0.9005
+Epoch 19, Batch 1700 | Acc: 0.8924 | PosAcc: 0.8713 | NegAcc: 0.9007
+Epoch 19, Batch 1720 | Acc: 0.8924 | PosAcc: 0.8704 | NegAcc: 0.9011
+Epoch 19, Batch 1740 | Acc: 0.8929 | PosAcc: nan | NegAcc: 0.9015
+Epoch 19, Batch 1760 | Acc: 0.8933 | PosAcc: nan | NegAcc: 0.9018
+Epoch 19, Batch 1780 | Acc: 0.8935 | PosAcc: 0.8713 | NegAcc: 0.9024
+Epoch 19, Batch 1800 | Acc: 0.8933 | PosAcc: nan | NegAcc: 0.9024
+Epoch 19, Batch 1820 | Acc: 0.8931 | PosAcc: 0.8711 | NegAcc: 0.9019
+Epoch 19, Batch 1840 | Acc: 0.8934 | PosAcc: 0.8711 | NegAcc: 0.9023
+Epoch 19, Batch 1860 | Acc: 0.8936 | PosAcc: 0.8714 | NegAcc: 0.9025
+Epoch 19, Batch 1880 | Acc: 0.8931 | PosAcc: 0.8709 | NegAcc: 0.9020
+Epoch 19, Batch 1900 | Acc: 0.8928 | PosAcc: 0.8696 | NegAcc: 0.9020
+Epoch 19, Batch 1920 | Acc: 0.8928 | PosAcc: 0.8695 | NegAcc: 0.9020
+Epoch 19, Batch 1940 | Acc: 0.8927 | PosAcc: 0.8695 | NegAcc: 0.9019
+Epoch 19, Batch 1960 | Acc: 0.8932 | PosAcc: 0.8696 | NegAcc: 0.9026
+Epoch 19, Batch 1980 | Acc: 0.8929 | PosAcc: 0.8698 | NegAcc: 0.9021
+Epoch 19, Batch 2000 | Acc: 0.8927 | PosAcc: 0.8693 | NegAcc: 0.9020
+Epoch 19, Batch 2020 | Acc: 0.8928 | PosAcc: 0.8703 | NegAcc: 0.9018
+Epoch 19, Batch 2040 | Acc: 0.8932 | PosAcc: 0.8706 | NegAcc: 0.9022
+Epoch 19, Batch 2060 | Acc: 0.8936 | PosAcc: 0.8713 | NegAcc: 0.9024
+Epoch 19, Batch 2080 | Acc: 0.8933 | PosAcc: nan | NegAcc: 0.9022
+Epoch 19, Batch 2100 | Acc: 0.8932 | PosAcc: 0.8707 | NegAcc: 0.9022
+Epoch 19, Batch 2120 | Acc: 0.8933 | PosAcc: 0.8709 | NegAcc: 0.9023
+Epoch 19, Batch 2140 | Acc: 0.8938 | PosAcc: 0.8711 | NegAcc: 0.9028
+Epoch 19, Batch 2160 | Acc: 0.8938 | PosAcc: 0.8716 | NegAcc: 0.9026
+Epoch 19, Batch 2180 | Acc: 0.8936 | PosAcc: 0.8710 | NegAcc: 0.9026
+Epoch 19, Batch 2200 | Acc: 0.8935 | PosAcc: 0.8708 | NegAcc: 0.9026
+Epoch 19, Batch 2220 | Acc: 0.8939 | PosAcc: 0.8712 | NegAcc: 0.9029
+Epoch 19, Batch 2240 | Acc: 0.8938 | PosAcc: 0.8703 | NegAcc: 0.9032
+Epoch 19, Batch 2260 | Acc: 0.8939 | PosAcc: 0.8706 | NegAcc: 0.9031
+Epoch 19, Batch 2280 | Acc: 0.8942 | PosAcc: 0.8712 | NegAcc: 0.9034
+Epoch 19, Batch 2300 | Acc: 0.8946 | PosAcc: 0.8715 | NegAcc: 0.9037
+Epoch 19, Batch 2320 | Acc: 0.8947 | PosAcc: 0.8715 | NegAcc: 0.9039
+Epoch 19, Batch 2340 | Acc: 0.8946 | PosAcc: 0.8712 | NegAcc: 0.9040
+Epoch 19, Batch 2360 | Acc: 0.8947 | PosAcc: 0.8712 | NegAcc: 0.9040
+Epoch 19, Batch 2380 | Acc: 0.8945 | PosAcc: 0.8708 | NegAcc: 0.9040
+Epoch 19, Batch 2400 | Acc: 0.8947 | PosAcc: 0.8710 | NegAcc: 0.9043
+Epoch 19, Batch 2420 | Acc: 0.8951 | PosAcc: 0.8717 | NegAcc: 0.9044
+Epoch 19, Batch 2440 | Acc: 0.8953 | PosAcc: 0.8716 | NegAcc: 0.9047
+Epoch 19, Batch 2460 | Acc: 0.8950 | PosAcc: 0.8707 | NegAcc: 0.9047
+Epoch 19, Batch 2480 | Acc: 0.8950 | PosAcc: 0.8708 | NegAcc: 0.9046
+Epoch 19, Batch 2500 | Acc: 0.8948 | PosAcc: 0.8707 | NegAcc: 0.9044
+Epoch 19, Batch 2520 | Acc: 0.8949 | PosAcc: 0.8705 | NegAcc: 0.9047
+Epoch 19, Batch 2540 | Acc: 0.8952 | PosAcc: 0.8708 | NegAcc: 0.9050
+Epoch 19, Batch 2560 | Acc: 0.8954 | PosAcc: 0.8711 | NegAcc: 0.9051
+Epoch 19, Batch 2580 | Acc: 0.8953 | PosAcc: 0.8708 | NegAcc: 0.9051
+Epoch 19, Batch 2600 | Acc: 0.8951 | PosAcc: 0.8707 | NegAcc: 0.9049
+Epoch 19, Batch 2620 | Acc: 0.8951 | PosAcc: 0.8708 | NegAcc: 0.9048
+Epoch 19, Batch 2640 | Acc: 0.8954 | PosAcc: 0.8713 | NegAcc: 0.9050
+Epoch 19, Batch 2660 | Acc: 0.8953 | PosAcc: 0.8712 | NegAcc: 0.9050
+Epoch 19, Batch 2680 | Acc: 0.8955 | PosAcc: 0.8714 | NegAcc: 0.9052
+Epoch 19, Batch 2700 | Acc: 0.8958 | PosAcc: 0.8721 | NegAcc: 0.9052
+Epoch 19, Batch 2720 | Acc: 0.8962 | PosAcc: 0.8727 | NegAcc: 0.9057
+Epoch 19, Batch 2740 | Acc: 0.8960 | PosAcc: 0.8724 | NegAcc: 0.9054
+Epoch 19, Batch 2760 | Acc: 0.8959 | PosAcc: 0.8727 | NegAcc: 0.9052
+Epoch 19, Batch 2780 | Acc: 0.8957 | PosAcc: 0.8730 | NegAcc: 0.9048
+Epoch 19, Batch 2800 | Acc: 0.8956 | PosAcc: 0.8729 | NegAcc: 0.9047
+Epoch 19, Batch 2820 | Acc: 0.8959 | PosAcc: 0.8734 | NegAcc: 0.9050
+Epoch 19, Batch 2840 | Acc: 0.8959 | PosAcc: nan | NegAcc: 0.9050
+Epoch 19, Batch 2860 | Acc: 0.8958 | PosAcc: 0.8733 | NegAcc: 0.9048
+Epoch 19, Batch 2880 | Acc: 0.8959 | PosAcc: 0.8733 | NegAcc: 0.9049
+Epoch 19, Batch 2900 | Acc: 0.8961 | PosAcc: 0.8737 | NegAcc: 0.9051
+Epoch 19, Batch 2920 | Acc: 0.8959 | PosAcc: 0.8738 | NegAcc: 0.9048
+Epoch 19, Batch 2940 | Acc: 0.8957 | PosAcc: 0.8734 | NegAcc: 0.9047
+Epoch 19, Batch 2960 | Acc: 0.8957 | PosAcc: 0.8734 | NegAcc: 0.9047
+Epoch 19, Batch 2980 | Acc: 0.8958 | PosAcc: 0.8735 | NegAcc: 0.9048
+Epoch 19, Batch 3000 | Acc: 0.8961 | PosAcc: 0.8739 | NegAcc: 0.9051
+Epoch 19, Batch 3020 | Acc: 0.8958 | PosAcc: 0.8733 | NegAcc: 0.9049
+Epoch 19, Batch 3040 | Acc: 0.8959 | PosAcc: 0.8733 | NegAcc: 0.9050
+Epoch 19, Batch 3060 | Acc: 0.8958 | PosAcc: 0.8735 | NegAcc: 0.9048
+Epoch 19, Batch 3080 | Acc: 0.8959 | PosAcc: 0.8739 | NegAcc: 0.9047
+Epoch 19, Batch 3100 | Acc: 0.8958 | PosAcc: 0.8739 | NegAcc: 0.9046
+Epoch 19, Batch 3120 | Acc: 0.8960 | PosAcc: nan | NegAcc: 0.9047
+Epoch 19, Batch 3140 | Acc: 0.8961 | PosAcc: 0.8740 | NegAcc: 0.9050
+Epoch 19, Batch 3160 | Acc: 0.8960 | PosAcc: 0.8740 | NegAcc: 0.9048
+Epoch 19, Batch 3180 | Acc: 0.8960 | PosAcc: 0.8740 | NegAcc: 0.9048
+Epoch 19, Batch 3200 | Acc: 0.8961 | PosAcc: 0.8745 | NegAcc: 0.9047
+Epoch 19, Batch 3220 | Acc: 0.8964 | PosAcc: 0.8751 | NegAcc: 0.9050
+Epoch 19, Batch 3240 | Acc: 0.8965 | PosAcc: 0.8752 | NegAcc: 0.9050
+Epoch 19, Batch 3260 | Acc: 0.8967 | PosAcc: 0.8754 | NegAcc: 0.9052
+Epoch 19, Batch 3280 | Acc: 0.8969 | PosAcc: 0.8756 | NegAcc: 0.9054
+Epoch 19, Batch 3300 | Acc: 0.8967 | PosAcc: 0.8750 | NegAcc: 0.9054
+Epoch 19, Batch 3320 | Acc: 0.8962 | PosAcc: 0.8751 | NegAcc: 0.9046
+Epoch 19, Batch 3340 | Acc: 0.8963 | PosAcc: 0.8751 | NegAcc: 0.9048
+Epoch 19, Batch 3360 | Acc: 0.8963 | PosAcc: 0.8749 | NegAcc: 0.9049
+Epoch 19, Batch 3380 | Acc: 0.8964 | PosAcc: 0.8748 | NegAcc: 0.9051
+Epoch 19, Batch 3400 | Acc: 0.8964 | PosAcc: nan | NegAcc: 0.9050
+Epoch 19, Batch 3420 | Acc: 0.8966 | PosAcc: 0.8748 | NegAcc: 0.9053
+Epoch 19, Batch 3440 | Acc: 0.8967 | PosAcc: 0.8750 | NegAcc: 0.9053
+Epoch 19, Batch 3460 | Acc: 0.8964 | PosAcc: 0.8747 | NegAcc: 0.9051
+Epoch 19, Batch 3480 | Acc: 0.8964 | PosAcc: 0.8749 | NegAcc: 0.9050
+Epoch 19, Batch 3500 | Acc: 0.8962 | PosAcc: 0.8747 | NegAcc: 0.9048
+Epoch 19, Batch 3520 | Acc: 0.8963 | PosAcc: 0.8748 | NegAcc: 0.9049
+Epoch 19, Batch 3540 | Acc: 0.8961 | PosAcc: 0.8746 | NegAcc: 0.9046
+Epoch 19, Batch 3560 | Acc: 0.8959 | PosAcc: 0.8744 | NegAcc: 0.9045
+Epoch 19, Batch 3580 | Acc: 0.8958 | PosAcc: 0.8742 | NegAcc: 0.9044
+Epoch 19, Batch 3600 | Acc: 0.8959 | PosAcc: 0.8743 | NegAcc: 0.9045
+Epoch 19, Batch 3620 | Acc: 0.8959 | PosAcc: 0.8743 | NegAcc: 0.9045
+Epoch 19, Batch 3640 | Acc: 0.8958 | PosAcc: 0.8745 | NegAcc: 0.9044
+Epoch 19, Batch 3660 | Acc: 0.8958 | PosAcc: 0.8744 | NegAcc: 0.9043
+Epoch 19, Batch 3680 | Acc: 0.8957 | PosAcc: 0.8743 | NegAcc: 0.9043
+Epoch 19, Batch 3700 | Acc: 0.8956 | PosAcc: 0.8742 | NegAcc: 0.9041
+Epoch 19, Batch 3720 | Acc: 0.8957 | PosAcc: 0.8746 | NegAcc: 0.9041
+Epoch 19, Batch 3740 | Acc: 0.8955 | PosAcc: 0.8745 | NegAcc: 0.9039
+Epoch 19, Batch 3760 | Acc: 0.8953 | PosAcc: nan | NegAcc: 0.9037
+Epoch 19, Batch 3780 | Acc: 0.8954 | PosAcc: 0.8744 | NegAcc: 0.9038
+Epoch 19, Batch 3800 | Acc: 0.8954 | PosAcc: 0.8744 | NegAcc: 0.9038
+Epoch 19, Batch 3820 | Acc: 0.8957 | PosAcc: 0.8748 | NegAcc: 0.9040
+Epoch 19, Batch 3840 | Acc: 0.8958 | PosAcc: 0.8746 | NegAcc: 0.9042
+Epoch 19, Batch 3860 | Acc: 0.8958 | PosAcc: 0.8746 | NegAcc: 0.9042
+Epoch 19, Batch 3880 | Acc: 0.8960 | PosAcc: 0.8752 | NegAcc: 0.9043
+Epoch 19, Batch 3900 | Acc: 0.8959 | PosAcc: 0.8748 | NegAcc: 0.9044
+Epoch 19, Batch 3920 | Acc: 0.8959 | PosAcc: 0.8748 | NegAcc: 0.9043
+Epoch 19, Batch 3940 | Acc: 0.8958 | PosAcc: 0.8748 | NegAcc: 0.9042
+Epoch 19, Batch 3960 | Acc: 0.8955 | PosAcc: 0.8748 | NegAcc: 0.9038
+Epoch 19, Batch 3980 | Acc: 0.8956 | PosAcc: 0.8750 | NegAcc: 0.9038
+Epoch 19, Batch 4000 | Acc: 0.8958 | PosAcc: 0.8753 | NegAcc: 0.9040
+Epoch 19, Batch 4020 | Acc: 0.8957 | PosAcc: 0.8753 | NegAcc: 0.9039
+Epoch 19, Batch 4040 | Acc: 0.8958 | PosAcc: 0.8754 | NegAcc: 0.9040
+Epoch 19, Batch 4060 | Acc: 0.8960 | PosAcc: 0.8756 | NegAcc: 0.9042
+Epoch 19, Batch 4080 | Acc: 0.8960 | PosAcc: 0.8754 | NegAcc: 0.9042
+Epoch 19, Batch 4100 | Acc: 0.8959 | PosAcc: 0.8752 | NegAcc: 0.9042
+Epoch 19, Batch 4120 | Acc: 0.8959 | PosAcc: 0.8752 | NegAcc: 0.9041
+Epoch 19, Batch 4140 | Acc: 0.8956 | PosAcc: 0.8747 | NegAcc: 0.9040
+Epoch 19, Batch 4160 | Acc: 0.8956 | PosAcc: 0.8745 | NegAcc: 0.9040
+Epoch 19, Batch 4180 | Acc: 0.8955 | PosAcc: 0.8747 | NegAcc: 0.9038
+Epoch 19, Batch 4200 | Acc: 0.8956 | PosAcc: 0.8749 | NegAcc: 0.9039
+Epoch 19, Batch 4220 | Acc: 0.8956 | PosAcc: 0.8746 | NegAcc: 0.9039
+Epoch 19, Batch 4240 | Acc: 0.8956 | PosAcc: 0.8748 | NegAcc: 0.9039
+Epoch 19, Batch 4260 | Acc: 0.8954 | PosAcc: 0.8748 | NegAcc: 0.9037
+Epoch 19, Batch 4280 | Acc: 0.8954 | PosAcc: 0.8743 | NegAcc: 0.9038
+Epoch 19, Batch 4300 | Acc: 0.8954 | PosAcc: 0.8741 | NegAcc: 0.9039
+Epoch 19, Batch 4320 | Acc: 0.8955 | PosAcc: nan | NegAcc: 0.9039
+Epoch 19, Batch 4340 | Acc: 0.8956 | PosAcc: 0.8745 | NegAcc: 0.9041
+Epoch 19, Batch 4360 | Acc: 0.8955 | PosAcc: 0.8744 | NegAcc: 0.9039
+Epoch 19, Batch 4380 | Acc: 0.8953 | PosAcc: 0.8743 | NegAcc: 0.9037
+Epoch 19, Batch 4400 | Acc: 0.8954 | PosAcc: 0.8742 | NegAcc: 0.9039
+Epoch 19, Batch 4420 | Acc: 0.8953 | PosAcc: 0.8741 | NegAcc: 0.9038
+Epoch 19, Batch 4440 | Acc: 0.8952 | PosAcc: 0.8742 | NegAcc: 0.9036
+Epoch 19, Batch 4460 | Acc: 0.8951 | PosAcc: 0.8739 | NegAcc: 0.9036
+Epoch 19, Batch 4480 | Acc: 0.8950 | PosAcc: nan | NegAcc: 0.9035
+Epoch 19, Batch 4500 | Acc: 0.8950 | PosAcc: 0.8741 | NegAcc: 0.9034
+Epoch 19, Batch 4520 | Acc: 0.8950 | PosAcc: 0.8739 | NegAcc: 0.9035
+Epoch 19, Batch 4540 | Acc: 0.8950 | PosAcc: 0.8737 | NegAcc: 0.9036
+Epoch 19, Batch 4560 | Acc: 0.8951 | PosAcc: 0.8737 | NegAcc: 0.9037
+Epoch 19, Batch 4580 | Acc: 0.8951 | PosAcc: 0.8735 | NegAcc: 0.9037
+	train_accuracy: 0.8951836734693878
+	pos train_accuracy: 0.8737142857142857
+	neg train_accuracy: 0.9037714285714286
+Epoch 19, Batch 20 | Val Acc: 0.8438 | Val PosAcc: 0.9286 | Val NegAcc: 0.8136
+Epoch 19, Batch 40 | Val Acc: 0.8250 | Val PosAcc: 0.9412 | Val NegAcc: 0.7830
+Epoch 19, Batch 60 | Val Acc: 0.8167 | Val PosAcc: nan | Val NegAcc: 0.7771
+Epoch 19, Batch 80 | Val Acc: 0.8063 | Val PosAcc: 0.9172 | Val NegAcc: 0.7665
+Epoch 19, Batch 100 | Val Acc: 0.8150 | Val PosAcc: 0.9198 | Val NegAcc: 0.7772
+Epoch 19, Batch 120 | Val Acc: 0.8187 | Val PosAcc: 0.9173 | Val NegAcc: 0.7833
+Epoch 19, Batch 140 | Val Acc: 0.8277 | Val PosAcc: 0.9238 | Val NegAcc: 0.7922
+Epoch 19, Batch 160 | Val Acc: 0.8281 | Val PosAcc: 0.9242 | Val NegAcc: 0.7930
+Epoch 19, Batch 180 | Val Acc: 0.8271 | Val PosAcc: 0.9264 | Val NegAcc: 0.7897
+Epoch 19, Batch 200 | Val Acc: 0.8244 | Val PosAcc: 0.9274 | Val NegAcc: 0.7852
+Epoch 19, Batch 220 | Val Acc: 0.8216 | Val PosAcc: 0.9223 | Val NegAcc: 0.7828
+Epoch 19, Batch 240 | Val Acc: 0.8234 | Val PosAcc: 0.9191 | Val NegAcc: 0.7856
+Epoch 19, Batch 260 | Val Acc: 0.8216 | Val PosAcc: 0.9158 | Val NegAcc: 0.7850
+Epoch 19, Batch 280 | Val Acc: 0.8237 | Val PosAcc: 0.9145 | Val NegAcc: 0.7889
+Epoch 19, Batch 300 | Val Acc: 0.8200 | Val PosAcc: 0.9138 | Val NegAcc: 0.7844
+Epoch 19, Batch 320 | Val Acc: 0.8199 | Val PosAcc: 0.9168 | Val NegAcc: 0.7828
+Epoch 19, Batch 340 | Val Acc: 0.8195 | Val PosAcc: 0.9187 | Val NegAcc: 0.7817
+Epoch 19, Batch 360 | Val Acc: 0.8205 | Val PosAcc: 0.9208 | Val NegAcc: 0.7823
+Epoch 19, Batch 380 | Val Acc: 0.8220 | Val PosAcc: 0.9217 | Val NegAcc: 0.7838
+Epoch 19, Batch 400 | Val Acc: 0.8206 | Val PosAcc: 0.9208 | Val NegAcc: 0.7824
+Epoch 19, Batch 420 | Val Acc: 0.8217 | Val PosAcc: 0.9179 | Val NegAcc: 0.7851
+Epoch 19, Batch 440 | Val Acc: 0.8219 | Val PosAcc: 0.9190 | Val NegAcc: 0.7847
+Epoch 19, Batch 460 | Val Acc: 0.8239 | Val PosAcc: 0.9216 | Val NegAcc: 0.7865
+Epoch 19, Batch 480 | Val Acc: 0.8229 | Val PosAcc: 0.9176 | Val NegAcc: 0.7864
+Epoch 19, Batch 500 | Val Acc: 0.8230 | Val PosAcc: nan | Val NegAcc: 0.7869
+Epoch 19, Batch 520 | Val Acc: 0.8214 | Val PosAcc: 0.9197 | Val NegAcc: 0.7835
+Epoch 19, Batch 540 | Val Acc: 0.8220 | Val PosAcc: 0.9202 | Val NegAcc: 0.7841
+Epoch 19, Batch 560 | Val Acc: 0.8196 | Val PosAcc: 0.9207 | Val NegAcc: 0.7806
+Epoch 19, Batch 580 | Val Acc: 0.8203 | Val PosAcc: 0.9214 | Val NegAcc: 0.7810
+Epoch 19, Batch 600 | Val Acc: 0.8183 | Val PosAcc: 0.9215 | Val NegAcc: 0.7785
+Epoch 19, Batch 620 | Val Acc: 0.8187 | Val PosAcc: 0.9229 | Val NegAcc: 0.7783
+Epoch 19, Batch 640 | Val Acc: 0.8186 | Val PosAcc: 0.9207 | Val NegAcc: 0.7787
+Epoch 19, Batch 660 | Val Acc: 0.8199 | Val PosAcc: 0.9205 | Val NegAcc: 0.7805
+Epoch 19, Batch 680 | Val Acc: 0.8208 | Val PosAcc: 0.9208 | Val NegAcc: 0.7818
+Epoch 19, Batch 700 | Val Acc: 0.8211 | Val PosAcc: 0.9217 | Val NegAcc: 0.7819
+Epoch 19, Batch 720 | Val Acc: 0.8215 | Val PosAcc: 0.9218 | Val NegAcc: 0.7822
+Epoch 19, Batch 740 | Val Acc: 0.8216 | Val PosAcc: 0.9229 | Val NegAcc: 0.7821
+Epoch 19, Batch 760 | Val Acc: 0.8219 | Val PosAcc: 0.9224 | Val NegAcc: 0.7824
+Epoch 19, Batch 780 | Val Acc: 0.8221 | Val PosAcc: 0.9233 | Val NegAcc: 0.7824
+Epoch 19, Batch 800 | Val Acc: 0.8225 | Val PosAcc: 0.9233 | Val NegAcc: 0.7827
+Epoch 19, Batch 820 | Val Acc: 0.8220 | Val PosAcc: 0.9207 | Val NegAcc: 0.7830
+Epoch 19, Batch 840 | Val Acc: 0.8216 | Val PosAcc: 0.9211 | Val NegAcc: 0.7824
+Epoch 19, Batch 860 | Val Acc: 0.8218 | Val PosAcc: 0.9218 | Val NegAcc: 0.7824
+Epoch 19, Batch 880 | Val Acc: 0.8214 | Val PosAcc: 0.9226 | Val NegAcc: 0.7816
+Epoch 19, Batch 900 | Val Acc: 0.8213 | Val PosAcc: 0.9219 | Val NegAcc: 0.7815
+Epoch 19, Batch 920 | Val Acc: 0.8220 | Val PosAcc: 0.9214 | Val NegAcc: 0.7827
+Epoch 19, Batch 940 | Val Acc: 0.8219 | Val PosAcc: nan | Val NegAcc: 0.7823
+Epoch 19, Batch 960 | Val Acc: 0.8230 | Val PosAcc: 0.9224 | Val NegAcc: 0.7837
+Epoch 19, Batch 980 | Val Acc: 0.8233 | Val PosAcc: 0.9206 | Val NegAcc: 0.7847
+Epoch 19, Batch 1000 | Val Acc: 0.8234 | Val PosAcc: 0.9210 | Val NegAcc: 0.7845
+Epoch 19, Batch 1020 | Val Acc: 0.8234 | Val PosAcc: 0.9223 | Val NegAcc: 0.7839
+Epoch 19, Batch 1040 | Val Acc: 0.8240 | Val PosAcc: 0.9223 | Val NegAcc: 0.7849
+Epoch 19, Batch 1060 | Val Acc: 0.8235 | Val PosAcc: 0.9221 | Val NegAcc: 0.7840
+Epoch 19, Batch 1080 | Val Acc: 0.8225 | Val PosAcc: 0.9213 | Val NegAcc: 0.7827
+Epoch 19, Batch 1100 | Val Acc: 0.8219 | Val PosAcc: 0.9195 | Val NegAcc: 0.7827
+Epoch 19, Batch 1120 | Val Acc: 0.8220 | Val PosAcc: 0.9195 | Val NegAcc: 0.7828
+Epoch 19, Batch 1140 | Val Acc: 0.8218 | Val PosAcc: 0.9184 | Val NegAcc: 0.7828
+Epoch 19, Batch 1160 | Val Acc: 0.8213 | Val PosAcc: 0.9187 | Val NegAcc: 0.7820
+Epoch 19, Batch 1180 | Val Acc: 0.8210 | Val PosAcc: 0.9189 | Val NegAcc: 0.7812
+Epoch 19, Batch 1200 | Val Acc: 0.8206 | Val PosAcc: 0.9193 | Val NegAcc: 0.7804
+Epoch 19, Batch 1220 | Val Acc: 0.8204 | Val PosAcc: 0.9196 | Val NegAcc: 0.7801
+Epoch 19, Batch 1240 | Val Acc: 0.8197 | Val PosAcc: 0.9180 | Val NegAcc: 0.7797
+Epoch 19, Batch 1260 | Val Acc: 0.8196 | Val PosAcc: 0.9169 | Val NegAcc: 0.7803
+Epoch 19, Batch 1280 | Val Acc: 0.8207 | Val PosAcc: 0.9179 | Val NegAcc: 0.7814
+Epoch 19, Batch 1300 | Val Acc: 0.8213 | Val PosAcc: 0.9176 | Val NegAcc: 0.7823
+Epoch 19, Batch 1320 | Val Acc: 0.8213 | Val PosAcc: 0.9184 | Val NegAcc: 0.7820
+Epoch 19, Batch 1340 | Val Acc: 0.8216 | Val PosAcc: 0.9192 | Val NegAcc: 0.7821
+Epoch 19, Batch 1360 | Val Acc: 0.8219 | Val PosAcc: 0.9195 | Val NegAcc: 0.7823
+Epoch 19, Batch 1380 | Val Acc: 0.8226 | Val PosAcc: 0.9194 | Val NegAcc: 0.7832
+Epoch 19, Batch 1400 | Val Acc: 0.8223 | Val PosAcc: 0.9186 | Val NegAcc: 0.7833
+Epoch 19, Batch 1420 | Val Acc: 0.8226 | Val PosAcc: 0.9190 | Val NegAcc: 0.7837
+Epoch 19, Batch 1440 | Val Acc: 0.8225 | Val PosAcc: 0.9184 | Val NegAcc: 0.7837
+Epoch 19, Batch 1460 | Val Acc: 0.8221 | Val PosAcc: 0.9186 | Val NegAcc: 0.7828
+Epoch 19, Batch 1480 | Val Acc: 0.8222 | Val PosAcc: 0.9185 | Val NegAcc: 0.7831
+Epoch 19, Batch 1500 | Val Acc: 0.8220 | Val PosAcc: 0.9178 | Val NegAcc: 0.7833
+Epoch 19, Batch 1520 | Val Acc: 0.8225 | Val PosAcc: 0.9182 | Val NegAcc: 0.7838
+Epoch 19, Batch 1540 | Val Acc: 0.8223 | Val PosAcc: 0.9176 | Val NegAcc: 0.7839
+Epoch 19, Batch 1560 | Val Acc: 0.8215 | Val PosAcc: nan | Val NegAcc: 0.7828
+Epoch 19, Batch 1580 | Val Acc: 0.8212 | Val PosAcc: 0.9161 | Val NegAcc: 0.7829
+Epoch 19, Batch 1600 | Val Acc: 0.8218 | Val PosAcc: 0.9165 | Val NegAcc: 0.7834
+Epoch 19, Batch 1620 | Val Acc: 0.8217 | Val PosAcc: 0.9161 | Val NegAcc: 0.7835
+Epoch 19, Batch 1640 | Val Acc: 0.8218 | Val PosAcc: 0.9167 | Val NegAcc: 0.7834
+Epoch 19, Batch 1660 | Val Acc: 0.8220 | Val PosAcc: 0.9163 | Val NegAcc: 0.7838
+Epoch 19, Batch 1680 | Val Acc: 0.8216 | Val PosAcc: 0.9162 | Val NegAcc: 0.7833
+Epoch 19, Batch 1700 | Val Acc: 0.8214 | Val PosAcc: 0.9156 | Val NegAcc: 0.7834
+Epoch 19, Batch 1720 | Val Acc: 0.8217 | Val PosAcc: 0.9162 | Val NegAcc: 0.7836
+Epoch 19, Batch 1740 | Val Acc: 0.8216 | Val PosAcc: 0.9157 | Val NegAcc: 0.7838
+Epoch 19, Batch 1760 | Val Acc: 0.8222 | Val PosAcc: 0.9163 | Val NegAcc: 0.7843
+Epoch 19, Batch 1780 | Val Acc: 0.8221 | Val PosAcc: 0.9159 | Val NegAcc: 0.7844
+Epoch 19, Batch 1800 | Val Acc: 0.8215 | Val PosAcc: 0.9154 | Val NegAcc: 0.7837
+Epoch 19, Batch 1820 | Val Acc: 0.8209 | Val PosAcc: 0.9159 | Val NegAcc: 0.7829
+Epoch 19, Batch 1840 | Val Acc: 0.8209 | Val PosAcc: nan | Val NegAcc: 0.7829
+Epoch 19, Batch 1860 | Val Acc: 0.8216 | Val PosAcc: nan | Val NegAcc: 0.7836
+Epoch 19, Batch 1880 | Val Acc: 0.8215 | Val PosAcc: nan | Val NegAcc: 0.7838
+Epoch 19, Batch 1900 | Val Acc: 0.8214 | Val PosAcc: 0.9162 | Val NegAcc: 0.7835
+Epoch 19, Batch 1920 | Val Acc: 0.8214 | Val PosAcc: 0.9160 | Val NegAcc: 0.7835
+Epoch 19, Batch 1940 | Val Acc: 0.8217 | Val PosAcc: 0.9163 | Val NegAcc: 0.7839
+Epoch 19, Batch 1960 | Val Acc: 0.8219 | Val PosAcc: 0.9165 | Val NegAcc: 0.7841
+	val_accuracy: 0.8217777777777778
+	pos val_accuracy: 0.9168888888888889
+	neg val_accuracy: 0.7837333333333333
+Epoch 20, Batch 20 | Acc: 0.8688 | PosAcc: 0.9318 | NegAcc: 0.8448
+Epoch 20, Batch 40 | Acc: 0.8969 | PosAcc: nan | NegAcc: 0.8771
+Epoch 20, Batch 60 | Acc: 0.9125 | PosAcc: 0.9531 | NegAcc: 0.8977
+Epoch 20, Batch 80 | Acc: 0.9156 | PosAcc: 0.9302 | NegAcc: 0.9103
+Epoch 20, Batch 100 | Acc: 0.9225 | PosAcc: 0.9352 | NegAcc: 0.9178
+Epoch 20, Batch 120 | Acc: 0.9229 | PosAcc: 0.9183 | NegAcc: 0.9246
+Epoch 20, Batch 140 | Acc: 0.9205 | PosAcc: 0.9023 | NegAcc: 0.9274
+Epoch 20, Batch 160 | Acc: 0.9242 | PosAcc: 0.9080 | NegAcc: 0.9303
+Epoch 20, Batch 180 | Acc: 0.9250 | PosAcc: 0.9100 | NegAcc: 0.9308
+Epoch 20, Batch 200 | Acc: 0.9244 | PosAcc: 0.9105 | NegAcc: 0.9299
+Epoch 20, Batch 220 | Acc: 0.9261 | PosAcc: 0.9176 | NegAcc: 0.9296
+Epoch 20, Batch 240 | Acc: 0.9245 | PosAcc: 0.9144 | NegAcc: 0.9285
+Epoch 20, Batch 260 | Acc: 0.9221 | PosAcc: 0.9128 | NegAcc: 0.9259
+Epoch 20, Batch 280 | Acc: 0.9228 | PosAcc: 0.9135 | NegAcc: 0.9264
+Epoch 20, Batch 300 | Acc: 0.9204 | PosAcc: 0.9142 | NegAcc: 0.9229
+Epoch 20, Batch 320 | Acc: 0.9219 | PosAcc: 0.9158 | NegAcc: 0.9243
+Epoch 20, Batch 340 | Acc: 0.9213 | PosAcc: 0.9146 | NegAcc: 0.9240
+Epoch 20, Batch 360 | Acc: 0.9233 | PosAcc: 0.9163 | NegAcc: 0.9261
+Epoch 20, Batch 380 | Acc: 0.9243 | PosAcc: 0.9179 | NegAcc: 0.9269
+Epoch 20, Batch 400 | Acc: 0.9259 | PosAcc: 0.9182 | NegAcc: 0.9290
+Epoch 20, Batch 420 | Acc: 0.9268 | PosAcc: 0.9168 | NegAcc: 0.9307
+Epoch 20, Batch 440 | Acc: 0.9278 | PosAcc: 0.9177 | NegAcc: 0.9319
+Epoch 20, Batch 460 | Acc: 0.9280 | PosAcc: 0.9195 | NegAcc: 0.9313
+Epoch 20, Batch 480 | Acc: 0.9284 | PosAcc: 0.9181 | NegAcc: 0.9324
+Epoch 20, Batch 500 | Acc: 0.9280 | PosAcc: 0.9183 | NegAcc: 0.9318
+Epoch 20, Batch 520 | Acc: 0.9284 | PosAcc: 0.9198 | NegAcc: 0.9318
+Epoch 20, Batch 540 | Acc: 0.9285 | PosAcc: 0.9184 | NegAcc: 0.9325
+Epoch 20, Batch 560 | Acc: 0.9286 | PosAcc: 0.9199 | NegAcc: 0.9320
+Epoch 20, Batch 580 | Acc: 0.9295 | PosAcc: 0.9203 | NegAcc: 0.9332
+Epoch 20, Batch 600 | Acc: 0.9296 | PosAcc: 0.9216 | NegAcc: 0.9328
+Epoch 20, Batch 620 | Acc: 0.9286 | PosAcc: 0.9208 | NegAcc: 0.9318
+Epoch 20, Batch 640 | Acc: 0.9289 | PosAcc: 0.9208 | NegAcc: 0.9321
+Epoch 20, Batch 660 | Acc: 0.9290 | PosAcc: 0.9185 | NegAcc: 0.9332
+Epoch 20, Batch 680 | Acc: 0.9292 | PosAcc: 0.9193 | NegAcc: 0.9332
+Epoch 20, Batch 700 | Acc: 0.9289 | PosAcc: 0.9200 | NegAcc: 0.9325
+Epoch 20, Batch 720 | Acc: 0.9288 | PosAcc: 0.9195 | NegAcc: 0.9326
+Epoch 20, Batch 740 | Acc: 0.9291 | PosAcc: 0.9210 | NegAcc: 0.9323
+Epoch 20, Batch 760 | Acc: 0.9281 | PosAcc: 0.9195 | NegAcc: 0.9316
+Epoch 20, Batch 780 | Acc: 0.9279 | PosAcc: 0.9190 | NegAcc: 0.9314
+Epoch 20, Batch 800 | Acc: 0.9286 | PosAcc: 0.9182 | NegAcc: 0.9328
+Epoch 20, Batch 820 | Acc: 0.9273 | PosAcc: 0.9157 | NegAcc: 0.9319
+Epoch 20, Batch 840 | Acc: 0.9269 | PosAcc: 0.9158 | NegAcc: 0.9314
+Epoch 20, Batch 860 | Acc: 0.9269 | PosAcc: 0.9175 | NegAcc: 0.9307
+Epoch 20, Batch 880 | Acc: 0.9273 | PosAcc: 0.9174 | NegAcc: 0.9313
+Epoch 20, Batch 900 | Acc: 0.9279 | PosAcc: 0.9171 | NegAcc: 0.9323
+Epoch 20, Batch 920 | Acc: 0.9288 | PosAcc: 0.9174 | NegAcc: 0.9334
+Epoch 20, Batch 940 | Acc: 0.9297 | PosAcc: nan | NegAcc: 0.9343
+Epoch 20, Batch 960 | Acc: 0.9290 | PosAcc: 0.9162 | NegAcc: 0.9342
+Epoch 20, Batch 980 | Acc: 0.9295 | PosAcc: 0.9170 | NegAcc: 0.9345
+Epoch 20, Batch 1000 | Acc: 0.9296 | PosAcc: 0.9177 | NegAcc: 0.9344
+Epoch 20, Batch 1020 | Acc: 0.9297 | PosAcc: 0.9170 | NegAcc: 0.9347
+Epoch 20, Batch 1040 | Acc: 0.9294 | PosAcc: 0.9161 | NegAcc: 0.9348
+Epoch 20, Batch 1060 | Acc: 0.9289 | PosAcc: 0.9159 | NegAcc: 0.9341
+Epoch 20, Batch 1080 | Acc: 0.9289 | PosAcc: 0.9165 | NegAcc: 0.9339
+Epoch 20, Batch 1100 | Acc: 0.9289 | PosAcc: 0.9164 | NegAcc: 0.9338
+Epoch 20, Batch 1120 | Acc: 0.9283 | PosAcc: 0.9159 | NegAcc: 0.9333
+Epoch 20, Batch 1140 | Acc: 0.9281 | PosAcc: 0.9157 | NegAcc: 0.9330
+Epoch 20, Batch 1160 | Acc: 0.9275 | PosAcc: 0.9135 | NegAcc: 0.9330
+Epoch 20, Batch 1180 | Acc: 0.9272 | PosAcc: 0.9124 | NegAcc: 0.9331
+Epoch 20, Batch 1200 | Acc: 0.9272 | PosAcc: 0.9119 | NegAcc: 0.9333
+Epoch 20, Batch 1220 | Acc: 0.9274 | PosAcc: 0.9116 | NegAcc: 0.9336
+Epoch 20, Batch 1240 | Acc: 0.9276 | PosAcc: 0.9121 | NegAcc: 0.9338
+Epoch 20, Batch 1260 | Acc: 0.9278 | PosAcc: 0.9116 | NegAcc: 0.9342
+Epoch 20, Batch 1280 | Acc: 0.9277 | PosAcc: 0.9124 | NegAcc: 0.9339
+Epoch 20, Batch 1300 | Acc: 0.9280 | PosAcc: 0.9122 | NegAcc: 0.9343
+Epoch 20, Batch 1320 | Acc: 0.9283 | PosAcc: 0.9121 | NegAcc: 0.9348
+Epoch 20, Batch 1340 | Acc: 0.9282 | PosAcc: 0.9118 | NegAcc: 0.9347
+Epoch 20, Batch 1360 | Acc: 0.9282 | PosAcc: 0.9124 | NegAcc: 0.9345
+Epoch 20, Batch 1380 | Acc: 0.9280 | PosAcc: 0.9119 | NegAcc: 0.9344
+Epoch 20, Batch 1400 | Acc: 0.9279 | PosAcc: 0.9121 | NegAcc: 0.9342
+Epoch 20, Batch 1420 | Acc: 0.9275 | PosAcc: 0.9118 | NegAcc: 0.9337
+Epoch 20, Batch 1440 | Acc: 0.9280 | PosAcc: 0.9126 | NegAcc: 0.9341
+Epoch 20, Batch 1460 | Acc: 0.9282 | PosAcc: 0.9121 | NegAcc: 0.9345
+Epoch 20, Batch 1480 | Acc: 0.9280 | PosAcc: 0.9119 | NegAcc: 0.9344
+Epoch 20, Batch 1500 | Acc: 0.9276 | PosAcc: nan | NegAcc: 0.9341
+Epoch 20, Batch 1520 | Acc: 0.9280 | PosAcc: 0.9112 | NegAcc: 0.9346
+Epoch 20, Batch 1540 | Acc: 0.9284 | PosAcc: 0.9124 | NegAcc: 0.9348
+Epoch 20, Batch 1560 | Acc: 0.9284 | PosAcc: 0.9122 | NegAcc: 0.9349
+Epoch 20, Batch 1580 | Acc: 0.9284 | PosAcc: 0.9121 | NegAcc: 0.9349
+Epoch 20, Batch 1600 | Acc: 0.9287 | PosAcc: 0.9119 | NegAcc: 0.9354
+Epoch 20, Batch 1620 | Acc: 0.9281 | PosAcc: 0.9114 | NegAcc: 0.9347
+Epoch 20, Batch 1640 | Acc: 0.9282 | PosAcc: 0.9112 | NegAcc: 0.9349
+Epoch 20, Batch 1660 | Acc: 0.9280 | PosAcc: 0.9117 | NegAcc: 0.9345
+Epoch 20, Batch 1680 | Acc: 0.9283 | PosAcc: 0.9120 | NegAcc: 0.9347
+Epoch 20, Batch 1700 | Acc: 0.9281 | PosAcc: 0.9117 | NegAcc: 0.9346
+Epoch 20, Batch 1720 | Acc: 0.9279 | PosAcc: 0.9111 | NegAcc: 0.9346
+Epoch 20, Batch 1740 | Acc: 0.9276 | PosAcc: 0.9102 | NegAcc: 0.9345
+Epoch 20, Batch 1760 | Acc: 0.9273 | PosAcc: 0.9095 | NegAcc: 0.9344
+Epoch 20, Batch 1780 | Acc: 0.9276 | PosAcc: 0.9102 | NegAcc: 0.9345
+Epoch 20, Batch 1800 | Acc: 0.9276 | PosAcc: 0.9092 | NegAcc: 0.9349
+Epoch 20, Batch 1820 | Acc: 0.9277 | PosAcc: 0.9091 | NegAcc: 0.9352
+Epoch 20, Batch 1840 | Acc: 0.9276 | PosAcc: 0.9095 | NegAcc: 0.9348
+Epoch 20, Batch 1860 | Acc: 0.9278 | PosAcc: 0.9104 | NegAcc: 0.9348
+Epoch 20, Batch 1880 | Acc: 0.9281 | PosAcc: 0.9110 | NegAcc: 0.9350
+Epoch 20, Batch 1900 | Acc: 0.9280 | PosAcc: 0.9109 | NegAcc: 0.9348
+Epoch 20, Batch 1920 | Acc: 0.9276 | PosAcc: 0.9101 | NegAcc: 0.9346
+Epoch 20, Batch 1940 | Acc: 0.9274 | PosAcc: 0.9096 | NegAcc: 0.9345
+Epoch 20, Batch 1960 | Acc: 0.9274 | PosAcc: 0.9091 | NegAcc: 0.9347
+Epoch 20, Batch 1980 | Acc: 0.9266 | PosAcc: nan | NegAcc: 0.9338
+Epoch 20, Batch 2000 | Acc: 0.9264 | PosAcc: 0.9081 | NegAcc: 0.9338
+Epoch 20, Batch 2020 | Acc: 0.9259 | PosAcc: 0.9069 | NegAcc: 0.9335
+Epoch 20, Batch 2040 | Acc: 0.9257 | PosAcc: 0.9072 | NegAcc: 0.9331
+Epoch 20, Batch 2060 | Acc: 0.9258 | PosAcc: 0.9073 | NegAcc: 0.9333
+Epoch 20, Batch 2080 | Acc: 0.9260 | PosAcc: 0.9074 | NegAcc: 0.9335
+Epoch 20, Batch 2100 | Acc: 0.9259 | PosAcc: 0.9079 | NegAcc: 0.9331
+Epoch 20, Batch 2120 | Acc: 0.9259 | PosAcc: 0.9081 | NegAcc: 0.9331
+Epoch 20, Batch 2140 | Acc: 0.9260 | PosAcc: 0.9072 | NegAcc: 0.9336
+Epoch 20, Batch 2160 | Acc: 0.9260 | PosAcc: 0.9073 | NegAcc: 0.9335
+Epoch 20, Batch 2180 | Acc: 0.9257 | PosAcc: 0.9075 | NegAcc: 0.9330
+Epoch 20, Batch 2200 | Acc: 0.9254 | PosAcc: 0.9075 | NegAcc: 0.9326
+Epoch 20, Batch 2220 | Acc: 0.9252 | PosAcc: 0.9069 | NegAcc: 0.9326
+Epoch 20, Batch 2240 | Acc: 0.9251 | PosAcc: nan | NegAcc: 0.9324
+Epoch 20, Batch 2260 | Acc: 0.9251 | PosAcc: 0.9069 | NegAcc: 0.9323
+Epoch 20, Batch 2280 | Acc: 0.9249 | PosAcc: nan | NegAcc: 0.9323
+Epoch 20, Batch 2300 | Acc: 0.9251 | PosAcc: 0.9069 | NegAcc: 0.9324
+Epoch 20, Batch 2320 | Acc: 0.9250 | PosAcc: 0.9067 | NegAcc: 0.9324
+Epoch 20, Batch 2340 | Acc: 0.9249 | PosAcc: 0.9068 | NegAcc: 0.9322
+Epoch 20, Batch 2360 | Acc: 0.9249 | PosAcc: 0.9065 | NegAcc: 0.9324
+Epoch 20, Batch 2380 | Acc: 0.9252 | PosAcc: 0.9070 | NegAcc: 0.9325
+Epoch 20, Batch 2400 | Acc: 0.9252 | PosAcc: 0.9072 | NegAcc: 0.9324
+Epoch 20, Batch 2420 | Acc: 0.9251 | PosAcc: 0.9069 | NegAcc: 0.9323
+Epoch 20, Batch 2440 | Acc: 0.9252 | PosAcc: 0.9070 | NegAcc: 0.9325
+Epoch 20, Batch 2460 | Acc: 0.9253 | PosAcc: 0.9073 | NegAcc: 0.9325
+Epoch 20, Batch 2480 | Acc: 0.9254 | PosAcc: 0.9073 | NegAcc: 0.9327
+Epoch 20, Batch 2500 | Acc: 0.9251 | PosAcc: 0.9070 | NegAcc: 0.9324
+Epoch 20, Batch 2520 | Acc: 0.9247 | PosAcc: 0.9071 | NegAcc: 0.9317
+Epoch 20, Batch 2540 | Acc: 0.9247 | PosAcc: 0.9070 | NegAcc: 0.9319
+Epoch 20, Batch 2560 | Acc: 0.9248 | PosAcc: 0.9066 | NegAcc: 0.9321
+Epoch 20, Batch 2580 | Acc: 0.9250 | PosAcc: 0.9069 | NegAcc: 0.9322
+Epoch 20, Batch 2600 | Acc: 0.9249 | PosAcc: 0.9065 | NegAcc: 0.9323
+Epoch 20, Batch 2620 | Acc: 0.9250 | PosAcc: 0.9068 | NegAcc: 0.9323
+Epoch 20, Batch 2640 | Acc: 0.9248 | PosAcc: 0.9068 | NegAcc: 0.9320
+Epoch 20, Batch 2660 | Acc: 0.9247 | PosAcc: 0.9069 | NegAcc: 0.9319
+Epoch 20, Batch 2680 | Acc: 0.9246 | PosAcc: 0.9064 | NegAcc: 0.9320
+Epoch 20, Batch 2700 | Acc: 0.9246 | PosAcc: 0.9064 | NegAcc: 0.9319
+Epoch 20, Batch 2720 | Acc: 0.9247 | PosAcc: 0.9068 | NegAcc: 0.9319
+Epoch 20, Batch 2740 | Acc: 0.9248 | PosAcc: nan | NegAcc: 0.9321
+Epoch 20, Batch 2760 | Acc: 0.9247 | PosAcc: 0.9063 | NegAcc: 0.9321
+Epoch 20, Batch 2780 | Acc: 0.9244 | PosAcc: 0.9064 | NegAcc: 0.9316
+Epoch 20, Batch 2800 | Acc: 0.9242 | PosAcc: 0.9060 | NegAcc: 0.9315
+Epoch 20, Batch 2820 | Acc: 0.9243 | PosAcc: 0.9060 | NegAcc: 0.9317
+Epoch 20, Batch 2840 | Acc: 0.9243 | PosAcc: 0.9057 | NegAcc: 0.9317
+Epoch 20, Batch 2860 | Acc: 0.9245 | PosAcc: 0.9056 | NegAcc: 0.9321
+Epoch 20, Batch 2880 | Acc: 0.9244 | PosAcc: 0.9057 | NegAcc: 0.9319
+Epoch 20, Batch 2900 | Acc: 0.9245 | PosAcc: 0.9059 | NegAcc: 0.9320
+Epoch 20, Batch 2920 | Acc: 0.9245 | PosAcc: 0.9057 | NegAcc: 0.9321
+Epoch 20, Batch 2940 | Acc: 0.9247 | PosAcc: 0.9055 | NegAcc: 0.9324
+Epoch 20, Batch 2960 | Acc: 0.9247 | PosAcc: 0.9055 | NegAcc: 0.9324
+Epoch 20, Batch 2980 | Acc: 0.9249 | PosAcc: 0.9058 | NegAcc: 0.9326
+Epoch 20, Batch 3000 | Acc: 0.9248 | PosAcc: 0.9057 | NegAcc: 0.9325
+Epoch 20, Batch 3020 | Acc: 0.9248 | PosAcc: 0.9058 | NegAcc: 0.9323
+Epoch 20, Batch 3040 | Acc: 0.9248 | PosAcc: 0.9058 | NegAcc: 0.9324
+Epoch 20, Batch 3060 | Acc: 0.9248 | PosAcc: 0.9058 | NegAcc: 0.9324
+Epoch 20, Batch 3080 | Acc: 0.9250 | PosAcc: 0.9055 | NegAcc: 0.9327
+Epoch 20, Batch 3100 | Acc: 0.9249 | PosAcc: 0.9053 | NegAcc: 0.9328
+Epoch 20, Batch 3120 | Acc: 0.9248 | PosAcc: 0.9056 | NegAcc: 0.9326
+Epoch 20, Batch 3140 | Acc: 0.9248 | PosAcc: 0.9057 | NegAcc: 0.9324
+Epoch 20, Batch 3160 | Acc: 0.9247 | PosAcc: 0.9056 | NegAcc: 0.9324

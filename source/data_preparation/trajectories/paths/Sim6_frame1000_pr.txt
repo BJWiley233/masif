@@ -1,3 +1,4 @@
+Sim=6
 end=100
 start=0
 frames = torch.arange(0, end, dtype=torch.float32)  # [0,1,...,N-1]
